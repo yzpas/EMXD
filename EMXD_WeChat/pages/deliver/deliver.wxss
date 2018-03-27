@@ -1,0 +1,19 @@
+page{background:#f4f3f4;}
+
+/* m_xshipment */
+.m_xshipment{background:#fff;}
+
+.m_xshipment .rows{border-bottom:2rpx solid #f4f3f4;padding:0 24rpx;}
+.m_xshipment .rows input{font-size:24rpx;color:#6d6d6d;height:80rpx;line-height:80rpx88rpx;}
+.m_xshipment .rows input-placeholder{color:#6d6d6d;}
+
+
+
+
+
+.m_xshipment .take{overflow:hidden;padding:30rpx 22rpx 4rpx;}
+.m_xshipment .take .right{float:right;width:17.6%;text-align:center;}
+.m_xshipment .take .left{float:left;width:21%;text-align:center;}
+.m_xshipment .take .btns{width:100%;height:54rpx;line-height:54rpx;background:#fc595b;font-size:22rpx;color:#fff;}
+.m_xshipment .take .gray{background:#efeeef;color:#585858;}
+.m_xshipment .take .ums{font-size:18rpx;color:#aaa;height:38rpx;line-height:38rpx;}

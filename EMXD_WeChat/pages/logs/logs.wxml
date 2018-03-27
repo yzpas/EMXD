@@ -1,6 +1,25 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<view class="m_xtitle">
+    <image src="../images/head.jpg"></image>
+    <view class="mians">
+        <text>昵称</text>
+        <text>186****1111</text>
+    </view>
+</view>
+<view class="m_xtabs">
+    <view class="our" bindtap='store'>
+        <image src="../images/trian.png"></image>我的店铺
+    </view>
+    <view class="our" bindtap='order'>
+        <image src="../images/trian.png"></image>我买到的
+    </view>
+    <view class="our" bindtap='sellorderMan'>
+        <image src="../images/trian.png"></image>我卖出的
+    </view>
+    <view class="our" bindtap='location'> 
+        <image src="../images/trian.png"></image>收货地址
+    </view>
+    <view class="our" bindtap='opinion'>
+       <image src="../images/tel.png" class="tel"></image>意见反馈
+    </view>
 </view>

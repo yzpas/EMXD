@@ -1,0 +1,124 @@
+<view class='manage_tab'>
+    <view class='tabli {{currentTab==0 ? "select" : "tabli"}}' data-id='0' bindtap='tab'>全部</view>
+    <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>待付款</view>
+    <view class='tabli {{currentTab==2 ? "select" : "tabli"}}' data-id='2' bindtap='tab'>待发货</view>
+    <view class='tabli {{currentTab==3 ? "select" : "tabli"}}' data-id='3' bindtap='tab'>已完成</view>
+    <view class='tabli {{currentTab==4 ? "select" : "tabli"}}' data-id='4' bindtap='tab'>已关闭</view>
+</view>     
+
+<view class="m_xwraps">
+  <view class='m_xsend {{currentTab==0 ? "z_show" : "z_hide"}}'>
+      <view class="title">
+          <text>已取消</text>用户昵称1
+      </view>
+      <view class="design">
+          <view class="pays">
+              <text>￥79.98</text>
+              <view class="letter">共2件</view>
+          </view>
+          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
+          <view class="all" bindtap="details">
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          </view>
+      </view> 
+      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
+      <view class="remark">订单备注：下午6点半送到，电话111111</view>
+      <view class="take">
+          <view class="btns">去发货</view>
+          <view class="btns gray">取消订单</view>
+      </view>
+  </view>
+
+  <view class='m_xsend {{currentTab==1 ? "z_show" : "z_hide"}}'>
+      <view class="title">
+          <text>已取消</text>用户昵称2
+      </view>
+      <view class="design">
+          <view class="pays">
+              <text>￥79.98</text>
+              <view class="letter">共2件</view>
+          </view>
+          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
+          <view class="all" bindtap="details">
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          </view>
+      </view> 
+      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
+      <view class="remark">订单备注：下午6点半送到，电话111111</view>
+      <view class="take">
+          <view class="btns">去发货</view>
+          <view class="btns gray">取消订单</view>
+      </view>
+  </view>
+
+  <view class='m_xsend {{currentTab==2 ? "z_show" : "z_hide"}}'>
+      <view class="title">
+          <text>已取消</text>用户昵称3
+      </view>
+      <view class="design">
+          <view class="pays">
+              <text>￥79.98</text>
+              <view class="letter">共2件</view>
+          </view>
+          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
+          <view class="all" bindtap="details">
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          </view>
+      </view> 
+      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
+      <view class="remark">订单备注：下午6点半送到，电话111111</view>
+      <view class="take">
+          <view class="btns">去发货</view>
+          <view class="btns gray">取消订单</view>
+      </view>
+  </view>
+
+  <view class='m_xsend {{currentTab==3 ? "z_show" : "z_hide"}}'>
+      <view class="title">
+          <text>已取消</text>用户昵称4
+      </view>
+      <view class="design">
+          <view class="pays">
+              <text>￥79.98</text>
+              <view class="letter">共2件</view>
+          </view>
+          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
+          <view class="all" bindtap="details">
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          </view>
+      </view> 
+      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
+      <view class="remark">订单备注：下午6点半送到，电话111111</view>
+      <view class="take">
+          <view class="btns">去发货</view>
+          <view class="btns gray">取消订单</view>
+      </view>
+  </view>
+
+  <view class='m_xsend {{currentTab==4 ? "z_show" : "z_hide"}}'>
+      <view class="title">
+          <text>已取消</text>用户昵称5
+      </view>
+      <view class="design">
+          <view class="pays">
+              <text>￥79.98</text>
+              <view class="letter">共2件</view>
+          </view>
+          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
+          <view class="all" bindtap="details">
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          </view>
+      </view> 
+      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
+      <view class="remark">订单备注：下午6点半送到，电话111111</view>
+      <view class="take">
+          <view class="btns">去发货</view>
+          <view class="btns gray">取消订单</view>
+      </view>
+  </view>
+</view>

@@ -1,0 +1,52 @@
+<!-- <view class="m_xconstr">
+  <view class="rows">
+      <input type="text" placeholder="收货人" />
+  </view>
+  <view class="rows">
+      <input type="number" placeholder="联系方式" />
+  </view>
+  <view class="rows">
+      <input type="text" placeholder="详细地址" />
+  </view>
+</view> -->
+<view class="m_xsettled">
+    <view class="title">北京市</view>
+    <view class="line">
+        <text>联系人：</text>
+        <view class="import">
+            <input type="text" class="text" placeholder="啦啦" />
+        </view>
+    </view>
+    <view class="line">
+        <text>手机号：</text>
+        <view class="import">
+            <input type="text" class="text" placeholder="收货人手机号码" />
+        </view>
+    </view>
+    <view class="line">
+        <button>获取验证码</button>
+        <text>验证码：</text>
+        <view class="import nall">
+            <input type="text" class="text" placeholder="" />
+        </view>
+    </view>
+    <view class="line">
+        <text>店铺名称：</text>
+        <view class="import">
+            <input type="text" class="text" placeholder="" />
+        </view>
+    </view>
+    <view class="line">
+        <text>详细地址：</text>
+        <view class="import">
+            <input type="text" class="text" placeholder="" />
+        </view>
+    </view>
+    <view class="line">
+        <text>店铺简介：</text>
+        <view class="import">
+            <textarea value="" />
+        </view>
+    </view>
+</view>
+ <button class="m_xcome">提交</button> 

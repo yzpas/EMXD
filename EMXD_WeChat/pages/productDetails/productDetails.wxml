@@ -1,0 +1,91 @@
+<view class="m_xwraps">
+  <swiper class="m_xdiagram" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="m_xprice">￥<text>9</text>.90</view>
+  <view class="m_xstate">泰国white芦荟洗发水,男女通用，一瓶装22克泰国white芦荟洗发水,男女通用，一瓶装22克</view>
+  <view class="m_xdetail">
+    <view class="title">商品详情</view>
+    <view class="truth">
+        <text>图片+文字混排</text>
+        <image src="/pages/images/create.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+<view class="m_xsettle">
+    <view class="hide">
+      <view class="all">
+          <view class="dels">
+            <image src="/pages/images/del.png" mode="widthFix"></image>清空购物车
+          </view>
+          <view class="sele">
+            <image src="/pages/images/sele_1.png" mode="widthFix"></image>全选（已选3件）
+          </view>
+      </view>
+      <view class="shop">
+          <view class="nums">
+            <image src="/pages/images/sele_5.png" mode="widthFix"></image>
+            <text>1</text>
+            <image src="/pages/images/sele_3.png" mode="widthFix"></image>
+          </view>
+          <view class="cont">
+            <image src="/pages/images/sele_1.png" class="sele" mode="widthFix"></image> 
+            <image src="/pages/images/pics_1.jpg" class="demo" mode="widthFix"></image> 
+            <view class="pay">
+                <text>[农鲜生] 罗非鱼约1公斤-宰杀需要备注</text>
+                <text class="red">￥39.99</text>
+            </view>
+          </view>
+      </view>
+    </view>
+    <view class="settle">
+        <button bindtap="accounts">去结算</button>
+        <button class="add" bindtap="addCart">加入购物车</button>
+        <view class="car">
+          <image src="/pages/images/shop_car.png" mode="widthFix"></image>
+          <text>3</text>
+        </view>
+        <view class="pice">￥39.99</view>
+    </view>
+</view>
+<!--  -->
+<view class="m_xpopups" wx:if="{{select_specification}}" bindtap='popupShow' ></view>
+<view class="m_xspecs"  wx:if="{{select_specification}}" >
+      <image src="/pages/images/colse.png" class="colse" mode="widthFix" bindtap='popupShow'></image>
+      <swiper class="m_xwhite" indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgSmall}}">
+          <swiper-item>
+              <image src="{{item}}" class="slide-image" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class="pays">￥39.99</view>
+      <view class="nums">
+        <image src="/pages/images/sele_6.png" mode="widthFix"></image>
+        <text>1</text>
+        <image src="/pages/images/sele_4.png" mode="widthFix"></image>
+      </view>
+      <view class="m_xsize">
+          <text>颜色</text>
+          <view class="sort">
+              <view class="our current">黄色</view>
+              <view class="our">白色</view>
+          </view>
+      </view>
+      <view class="m_xsize soil">
+          <text>尺寸</text>
+          <view class="sort">
+              <view class="our current">M</view>
+              <view class="our">L</view>
+          </view>
+      </view>
+      <button class="btns">确定</button>
+  </view>

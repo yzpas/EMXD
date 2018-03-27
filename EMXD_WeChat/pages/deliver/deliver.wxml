@@ -1,0 +1,21 @@
+<view class="m_xshipment">
+    <view class="rows">
+        <input type="text" placeholder="选择快递公司" />
+    </view>
+    <view class="rows">
+        <input type="text" placeholder="输入快递编号" />
+    </view>
+
+     <view class="take">
+        
+        <view class="right">
+          <view class="btns">快递发货</view>
+          <view class="ums">填写快递编号</view>
+        </view>
+        <view class="left">
+          <view class="btns gray">已自行寄出</view>
+          <view class="ums">无需填写快递单号</view>
+        </view>
+        
+    </view> 
+</view>

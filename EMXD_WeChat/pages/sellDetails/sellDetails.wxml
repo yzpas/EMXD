@@ -1,0 +1,58 @@
+<view class="m_xsend">
+    <view class="title">
+        <text>已完成</text>超市名称 
+    </view>
+    <view class="cont">
+      <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+      <view class="pay">
+        <view class="nuns">[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
+        <view class="nuns red"><text>共1件</text>￥39.99</view>
+      </view>
+    </view> 
+    <view class="remark">03-12  18:00</view>
+    <view class="remark total top"><text>商品金额</text>￥79.98</view>
+    <view class="remark total bottom"><text>应付 ￥79.98</text>合计：79.98</view>
+</view>
+<view class="m_xnews">
+    <view class="title">配送信息</view>
+    <view class="mains tels">
+        <image src="/pages/images/tel.png" class="demo" mode="widthFix"></image>
+        <text>收货地址：</text>
+        <view class="ruins">
+          <view class="nub">石头  186***1111</view>
+          <view class="nub">北京市朝阳区望京1单元101</view>
+        </view>
+    </view>
+    <view class="mains">
+        <text>配送方式：</text>
+        <view class="ruins">商家配送</view>
+    </view>
+    <view class="mains">
+        <text>物流信息：</text>
+        <view class="ruins">申通  1111 1111 1111 1111</view>
+    </view>
+    <view class="mains">
+        <text>发货时间：</text>
+        <view class="ruins">2017-03-02 18:00:03</view>
+    </view>
+</view>
+<view class="m_xnews m_xpadd">
+    <view class="title">订单信息</view>
+    <view class="mains">
+        <text>订单编号：</text>
+        <view class="ruins">1111 1111 1111 1111</view>
+    </view>
+    <view class="mains">
+        <text>下单时间：</text>
+        <view class="ruins">2018-01-19  16:09:10</view>
+    </view>
+    <view class="mains">
+        <text>支付方式：</text>
+        <view class="ruins">在线支付</view>
+    </view>
+    <view class="mains">
+        <text>订单备注：</text>
+        <view class="ruins">下午6点半送到，电话111111</view>
+    </view>
+</view>
+<view class="m_xcancel">订单进行中</view>

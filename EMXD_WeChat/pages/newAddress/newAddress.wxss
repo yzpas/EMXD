@@ -1,0 +1,33 @@
+page{background:#f4f3f4;}
+
+/* m_xcome */
+.m_xcome{
+  width:90%;
+  background:#fc6466;
+  text-align:center;
+  font-size:28rpx;
+  color:#fff;
+  border:none;
+  border-radius:0;
+  height:80rpx;
+  line-height:80rpx;
+  margin:26rpx auto;
+}
+
+/* m_xconstr */
+.m_xconstr{
+  background:#fff;
+}
+.m_xconstr .rows{
+  border-bottom:2rpx solid #f4f3f4;
+  padding:0 24rpx;
+}
+.m_xconstr .rows input{
+  font-size:24rpx;
+  color:#6d6d6d;
+  height:88rpx;
+  line-height:88rpx;
+}
+.m_xconstr .rows input-placeholder{
+  color:#6d6d6d;
+}

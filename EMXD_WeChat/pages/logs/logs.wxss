@@ -1,8 +1,13 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
-}
-.log-item {
-  margin: 10rpx;
-}
+page{background:#f4f3f4;}
+
+/* m_xtitle */
+.m_xtitle{background:#fc6466;padding:30rpx;overflow:hidden;}
+.m_xtitle image{float:left;width:130rpx;height:130rpx;border-radius:50%;}
+.m_xtitle .mians{margin-left:155rpx;}
+.m_xtitle text{display:block;font-size:24rpx;color:#fff;line-height:40rpx;padding-top:16rpx;}
+
+/* m_xtabs */
+.m_xtabs{background:#fff;}
+.m_xtabs .our{border-top:1px solid #f4f3f4;height:96rpx;line-height:96rpx;overflow:hidden;padding:0 24rpx 0 16rpx;color:#6d6d6d;font-size:28rpx;}
+.m_xtabs .our image{float:right;width:14rpx;height:24rpx;margin-top:36rpx;}
+.m_xtabs .our image.tel{width:45rpx;height:45rpx;margin-top:26rpx;}

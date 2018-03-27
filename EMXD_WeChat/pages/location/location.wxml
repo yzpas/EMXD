@@ -1,0 +1,7 @@
+<view class="m_xtitle">默认收货地址</view>
+<view class="m_xsite" bindtap="address">
+    <image src="../images/edit.png"></image> 
+    <view class="pet"><text>昵称</text>186****1111</view>
+    <view class="pet">北京市朝阳区望京1号</view>
+</view>
+<button class="m_xcome" bindtap="address">新建收货地址</button>

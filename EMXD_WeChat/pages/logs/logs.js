@@ -5,11 +5,39 @@ Page({
   data: {
     logs: []
   },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+  // 免费领取会员卡
+  freeoF: function () {
+    wx.navigateTo({
+      url: '../free/free'
     })
-  }
+  },
+  onLoad: function () {
+    
+  },
+  // 跳转我的店铺
+  store: function () {
+    wx.navigateTo({
+      url: '/pages/user/store/store'
+    })
+  },
+  location:function(){
+    wx.navigateTo({
+      url: '/pages/location/location'
+    })
+  },
+  sellorderMan: function () {
+    wx.navigateTo({
+      url: '/pages/sellorderMan/sellorderMan'
+    })
+  },
+  order: function () {
+    wx.navigateTo({
+      url: '/pages/order/order'
+    })
+  },
+  opinion:function(){
+    wx.makePhoneCall({
+      phoneNumber: '1340000' //仅为示例，并非真实的电话号码
+    })
+  },
 })

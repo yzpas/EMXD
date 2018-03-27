@@ -1,0 +1,26 @@
+<view class="m_xpres">
+  <view class="shop">
+    <image src="/pages/images/edit.png" class="edit" mode="widthFix"></image>
+    <image src="/pages/images/del_1.png" class="dels" mode="widthFix"></image>
+    <text>分类1</text>
+  </view>
+  <view class="shop">
+    <image src="/pages/images/edit.png" class="edit" mode="widthFix"></image>
+    <image src="/pages/images/del_1.png" class="dels" mode="widthFix"></image>
+    <text>分类2</text>
+  </view>
+</view>
+<button class="m_xcome" bindtap="address">新建收货地址</button>
+
+<view class="m_xpopup on">
+  <view class="m_xconfirm">           
+    <view class="title">添加分类</view>   
+    <view class="import">
+        <input type="text" placeholder="添加分类" />
+    </view>
+    <view class="btns">               
+        <view class="cancel">取消</view>       
+        <view class="ensure">确定</view>       
+    </view>        
+  </view>
+</view>

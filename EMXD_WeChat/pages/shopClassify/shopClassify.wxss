@@ -1,0 +1,13 @@
+page{background:#f4f3f4;}
+
+/* m_xpres */
+.m_xpres .shop{
+  background:#fff;
+  height:96rpx;
+  line-height:96rpx;
+  color:#6d6d6d;
+  font-size:24rpx;
+  padding:0 28rpx;
+  margin-bottom:2rpx;
+}
+

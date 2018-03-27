@@ -34,6 +34,61 @@ App({
       }
     })
   },
+  //注册页面时加载loading
+  loading: function () {
+    wx.showToast({
+      title: '加载中...',
+      image: '/pages/images/loading.gif',
+      icon: 'loading',
+      mask: true,
+      duration: 1000
+    })
+  },
+  // get请求
+  getRequest: function (url, data, succ, status) {
+    wx.request({
+      url: url,
+      data: data,
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        succ && succ(res);
+      },
+      fail: function (res) {
+        fail && fail(res);
+      },
+      complete: function () {
+        if (!status) {
+          wx.hideToast();
+        }
+      }
+    })
+  },
+
+  // post请求
+  postRequest: function (url, data, succ, status) {
+    wx.request({
+      url: url,
+      data: data,
+      method: 'post',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        succ && succ(res);
+      },
+      fail: function (res) {
+        fail && fail(res);
+      },
+      complete: function () {
+        if (!status) {
+          wx.hideToast();
+        }
+      }
+    })
+  },
   onShow: function (options) {
     // Do something when show.
   },

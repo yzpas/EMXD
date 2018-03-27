@@ -1,0 +1,51 @@
+<view class="m_xsend">
+    <view class="title">
+        <text>进行中</text>超市名称
+    </view>
+    <view class="design">
+        <view class="pays">
+            <text>￥79.98</text>
+            <view class="letter">共4件</view>
+        </view>
+        <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
+        <view class="all" bindtap="details">
+          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image>
+        </view>
+    </view> 
+    <view class="take">
+        <view class="btns">确认收货</view>
+        <view class="btns gray">取消收货</view>
+        <text>03-12  18:00</text>
+    </view>
+</view>
+<view class="m_xsend">
+    <view class="title">
+        <text class="red">待支付</text>超市名称
+    </view>
+    <view class="design wait">
+        <image src="/pages/images/pays.png" class="money" mode="widthFix"></image> 
+        <view class="conve">
+            <text>待支付 今天 17：58</text>
+            <text>请在订单提交后尽快完成支付，超市订单自动取消</text>
+            <image src="/pages/images/trian_1.png" class="tr" mode="widthFix"></image>
+        </view>
+        <view class="unit">
+          <view class="pays">
+              <text>￥79.98</text>
+              <view class="letter">共2件</view>
+          </view> 
+          <view class="all" bindtap="details">
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image>
+            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image>
+          </view>   
+        </view> 
+    </view> 
+    <view class="remark">订单备注：下午6点半送到，电话111111</view>
+    <view class="take">
+        <view class="btns">去支付</view>
+        <text>今天  18:00</text>
+    </view>
+</view>

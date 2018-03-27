@@ -1,0 +1,24 @@
+page{background:#f4f3f4;}
+
+/* m_xtabs */
+.m_xsite{overflow:hidden;padding:16rpx 28rpx;color:#6d6d6d;font-size:28rpx;background:#fff;margin:12rpx 0;position:relative;}
+.m_xsite .pet{font-size:24rpx;color:#6d6d6d;line-height:44rpx;}
+.m_xsite .pet text{display:inline-block;padding-right:70rpx;}
+.m_xsite image{width:14rpx;height:24rpx;position:absolute;top:50%;right:24rpx;margin-top:-12rpx;}
+
+/* m_xsend */
+.m_xsend{background:#fff;}
+.m_xsend .cont{overflow:hidden;padding:20rpx 14rpx 14rpx 26rpx;position:relative;border-bottom:1px solid #efeeef;}
+.m_xsend .cont image{float:left;width:94rpx;height:48rpx;margin-top:10rpx;}
+.m_xsend .cont .pay{margin-left:120rpx;}
+.m_xsend .cont .nuns{font-size:16rpx;color:#585858;line-height:26rpx;}
+.m_xsend .cont .red{color:#fc6466;font-size:22rpx;padding-top:6rpx;}
+.m_xsend .cont .red text{font-size:16rpx;color:#585858;padding-left:8rpx;display:inline-block;}
+.m_xsend .moeny{position:absolute;font-size:22rpx;color:#585858;right:20rpx;bottom:12rpx;}
+.m_xsend .title{overflow:hidden;line-height:56rpx;height:56rpx;border-bottom:1px solid #efeeef;padding:0 20rpx 0 25rpx;font-size:24rpx;color:#6d6d6d;font-weight:bold;}
+.m_xsend .title text{float:right;font-weight:normal;font-size:20rpx;}
+.m_xsend .remark{height:60rpx;line-height:60rpx;font-size:16rpx;color:#585858;padding: 0 28rpx;border-bottom:1px solid #efeeef;}
+.m_xsend .total{text-align:right;border-bottom:none;font-size:18rpx;color:#fc6466;}
+
+/* m_xcome */
+.m_xcome{position:fixed;width:90%;left:5%;bottom:30rpx;background:#fc6466;text-align:center;font-size:28rpx;color:#fff;border:none;border-radius:0;height:80rpx;line-height:80rpx;}

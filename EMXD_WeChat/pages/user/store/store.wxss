@@ -1,0 +1,135 @@
+/* pages/user/store/store.wxss */
+.store_header{
+  width: 100%;
+  height: 67rpx;
+  overflow: hidden;
+  padding:0 10rpx;
+  box-sizing: border-box;
+}
+.store_icon{
+  width: 37rpx;
+  height: 37rpx;
+  display: block;
+  float: left;
+  padding: 12rpx 7rpx 0 0;
+}
+.store_text{
+  float: left;
+  font-size: 20rpx;
+  color: #6d6d6d;
+  line-height: 67rpx;
+}
+.stor_time{
+  line-height: 67rpx;
+  float: right;
+  font-size: 24rpx;
+  color: #6d6d6d;
+}
+
+.store_main{
+  width: 100%;
+  height: 343rpx;
+  background-color: #fff;
+}
+.store_main_top{
+  width: 100%;
+  height: 171rpx;
+  border-bottom: 1px solid #f4f3f4;
+  overflow: hidden;
+}
+.store_money{
+  width: 140rpx;
+  overflow: hidden;
+  /* margin: 0 auto 0; */
+  padding-top: 55rpx;
+  text-align: left;
+  margin-left: 298rpx;
+  float: left;
+}
+.money_text{
+  font-size: 20rpx;
+  color: #6d6d6d;
+  margin-left: 4rpx;
+}
+.money_number{
+  font-size: 48rpx;
+  color: #6d6d6d;
+}
+.deposit_btn{
+  width: 80rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #fc6466;
+  font-size: 16rpx;
+  color: #fff;
+  border-radius: 0;
+  float: left;
+  margin-top: 98rpx;
+}
+.store_main_bottom{
+  width: 100%;
+
+}
+.store_main_bottom_li{
+  width: 25%;
+  text-align: left;
+  float: left;
+  padding: 34rpx 0 0 48rpx;
+  box-sizing: border-box;
+}
+.li_title{
+  font-size: 20rpx;
+  color: #6d6d6d;
+  padding-bottom: 20rpx;
+}
+.li_main{
+  font-size: 30rpx;
+  color: #6d6d6d;
+}
+.entrance{
+  background-color: #fff;
+  margin-top: 21px;
+  overflow: hidden;
+}
+.entrance_li{
+  width: 25%;
+  height: 171rpx;
+  float: left;
+}
+.entrance_icon{
+  width: 81rpx;
+  height: 81rpx;
+  display: block;
+  margin: 26rpx auto 14rpx;
+
+}
+.entrance_text{
+  text-align: center;
+  font-size: 18rpx;
+  color: #999999;
+}
+.tab{
+  width: 100%;
+  height: 94rpx;
+  border-top: 1px solid #c2c2c4;
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff;
+}
+.tab_li{
+  width: 33.33%;
+  float: left;
+
+}
+.tab_li_icon{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin: 6rpx auto;
+}
+.tab_li_text{
+  text-align: center;
+  font-size: 18rpx;
+  color: #a0a0a0;
+}

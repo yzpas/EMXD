@@ -1,0 +1,7 @@
+/* pages/commodity/commodity.wxss */
+.add_top{
+  width: 100%;
+  height: 280rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #efeeef;
+}

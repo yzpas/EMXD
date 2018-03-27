@@ -1,0 +1,82 @@
+<view class="page public_grey_bg">
+  <view class='store_header'>
+    <view class='store lf'>
+      <image src='/pages/images/y-icon1.png' class='store_icon' mode='aspectFit'></image>
+      <view class='store_text'>我的店铺</view>
+    </view>
+    <view class='store rf'>
+      <view class='stor_time'>2018-03-18</view>
+    </view>
+  </view>
+  <!--main  -->
+  <view class='store_main'>
+    <view class='store_main_top'>
+      <view class='store_money'>
+        <view class='money_text'>可提现(元)</view>
+        <view class='money_number'>2997</view>
+      </view>
+      <view class='deposit_btn' bindtap='winDeposit'>提现</view>
+    </view>
+    <view class='store_main_bottom'>
+      <view class='store_main_bottom_li'>
+        <view class='li_title'>总收入</view>
+        <view class='li_main'>90.00</view>
+      </view>
+      <view class='store_main_bottom_li'>
+        <view class='li_title'>交易中</view>
+        <view class='li_main'>90.00</view>
+      </view>
+      <view class='store_main_bottom_li'>
+        <view class='li_title'>结算中</view>
+        <view class='li_main'>90.00</view>
+      </view>
+      <view class='store_main_bottom_li'>
+        <view class='li_title'>已提现</view>
+        <view class='li_main'>90.00</view>
+      </view>
+    </view>
+  </view>
+  <!--入口  -->
+  <view class='entrance'>
+      <view class='entrance_li' bindtap='commodity'>
+        <image src='/pages/images/y-icon2.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text'>添加商品</view>
+      </view>
+      <view class='entrance_li' bindtap='commodityManage'>
+        <image src='/pages/images/y-icon3.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text' >商品管理</view>
+      </view>
+      <view class='entrance_li' bindtap='management'>
+        <image src='/pages/images/y-icon4.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text' >店铺管理</view>
+      </view>
+      <view class='entrance_li' bindtap='sellorderMan'>
+        <image src='/pages/images/y-icon5.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text'>订单管理</view>
+      </view>
+      <view class='entrance_li' bindtap='shopaddClassify'>
+        <image src='/pages/images/y-icon6.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text'>分类</view>
+      </view>
+      <view class='entrance_li' bindtap='winDeposit'>
+        <image src='/pages/images/y-icon7.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text'>资金</view>
+      </view>
+  </view>
+
+  <!--tab  -->
+  <view class='tab'>
+    <view class='tab_li'>
+        <image src='/pages/images/y-icon8-1.png' mode='aspectFit' class='tab_li_icon'></image>
+        <view class='tab_li_text'>首页</view>
+    </view>
+    <view class='tab_li'>
+        <image src='/pages/images/y-icon9-1.png' mode='aspectFit' class='tab_li_icon'></image>
+        <view class='tab_li_text'>订单</view>
+    </view>
+    <view class='tab_li'>
+        <image src='/pages/images/y-icon10-1.png' mode='aspectFit' class='tab_li_icon'></image>
+        <view class='tab_li_text'>我的</view>
+    </view>
+  </view>
+</view>

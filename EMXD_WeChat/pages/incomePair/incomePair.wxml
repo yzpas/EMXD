@@ -1,0 +1,49 @@
+<view class='manage_tab'>
+    <view class='tabli {{currentTab==0 ? "select" : "tabli"}}' data-id='0' bindtap='tab'>全部</view>
+    <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>收入</view>
+    <view class='tabli {{currentTab==2 ? "select" : "tabli"}}' data-id='2' bindtap='tab'>支出</view>
+    <view class='tabli {{currentTab==3 ? "select" : "tabli"}}' data-id='3' bindtap='tab'>冻结/解冻</view>
+</view>     
+
+<view class="m_xwraps">
+  <view class='m_xreceive {{currentTab==0 ? "z_show" : "z_hide"}}'>
+      <view class="title">2018-03-05</view>
+      <view class="details">
+          <text class="pays">+1.00</text>
+          <view class="mains">
+            <text>支付-桌子</text>
+            <text>2018-03-05</text>
+          </view>
+      </view>
+  </view>
+  <view class='m_xreceive {{currentTab==1 ? "z_show" : "z_hide"}}'>
+      <view class="title">2017-03-05</view>
+      <view class="details">
+          <text class="pays">+5.00</text>
+          <view class="mains">
+            <text>支付-桌子</text>
+            <text>2018-03-05</text>
+          </view>
+      </view>
+  </view>
+  <view class='m_xreceive {{currentTab==2 ? "z_show" : "z_hide"}}'>
+      <view class="title">2017-03-05</view>
+      <view class="details">
+          <text class="pays">+20.00</text>
+          <view class="mains">
+            <text>支付-毛巾</text>
+            <text>2018-03-05</text>
+          </view>
+      </view>
+  </view>
+  <view class='m_xreceive {{currentTab==3 ? "z_show" : "z_hide"}}'>
+      <view class="title">2017-03-05</view>
+      <view class="details">
+          <text class="pays">+26.00</text>
+          <view class="mains">
+            <text>支付-板凳</text>
+            <text>2018-03-05</text>
+          </view>
+      </view>
+  </view>
+</view>

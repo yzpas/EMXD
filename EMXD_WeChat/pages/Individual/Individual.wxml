@@ -1,0 +1,144 @@
+<view class="m_xbanner">
+    <image src="/pages/images/banner.jpg" mode="widthFix"></image>
+</view>
+<view class="m_xour" bindtap='Gouser'><image src="/pages/images/home_5.png" mode="widthFix"/></view>
+<view class="m_xwraps">
+    <view class="title">
+        <image src="/pages/images/shop_logo.png" mode="widthFix"></image>
+        <view class="mins">
+            <text class="top">商家店铺名字</text>
+            <text>店铺公告</text>
+        </view>
+    </view>
+    <view class="m_xtabs">
+        <view data-id='0' bindtap='selectTab' class="sort {{select==0?'on':''}}">商品</view>
+        <view data-id='1' bindtap='selectTab' class="sort {{select==1?'on':''}}">详情</view>
+    </view>
+    <view class="m_xproduct {{select==0?'z_show':''}} {{cart?'cart':''}}" id="">
+
+        <scroll-view scroll-y class="navs">
+            <view class="our on">海鲜蔬菜</view>
+            <view class="our">果实类</view>
+            <view class="our">果实类</view>
+            <view class="our">果实类</view>
+        </scroll-view>
+        <scroll-view scroll-y class="wares">
+          <view class="shops"  bindtap="details">
+            <image src="/pages/images/pics_2.jpg" mode="widthFix" class="pics"></image>
+            <view class="state">[农鲜生] 罗非鱼约1公斤 -宰杀需要备注</view>
+            <view class="coins">
+              <view class="nums">
+                  <image src="/pages/images/sele_5.png" class="no" mode="widthFix"></image>
+                  <text class="no">1</text>
+                  <image src="/pages/images/sele_3.png" mode="widthFix" catchtap="addCommodity"></image>
+              </view>
+              <view class="pay">￥39.99</view>
+            </view>
+          </view>
+          <view class="shops"  bindtap="details">
+            <image src="/pages/images/pics_3.jpg" mode="widthFix" class="pics"></image>
+            <view class="state">[农鲜生] 罗非鱼约1公斤 -宰杀需要备注</view>
+            <view class="coins">
+              <view class="nums">
+                  <image src="/pages/images/sele_5.png" class="no" mode="widthFix"></image>
+                  <text class="no">1</text>
+                  <image src="/pages/images/sele_3.png" mode="widthFix"  catchtap="addCommodity"></image>
+              </view>
+              <view class="pay">￥39.99</view>
+            </view>
+          </view>
+          <view class="shops"  bindtap="details">
+            <image src="/pages/images/pics_4.jpg" mode="widthFix" class="pics"></image>
+            <view class="state">[农鲜生] 罗非鱼约1公斤 -宰杀需要备注</view>
+            <view class="coins">
+              <view class="nums">
+                  <image src="/pages/images/sele_5.png" class="no" mode="widthFix"></image>
+                  <text class="no">1</text>
+                  <image src="/pages/images/sele_3.png" mode="widthFix"  catchtap="addCommodity"></image>
+              </view>
+              <view class="pay">￥39.99</view>
+            </view>
+          </view>
+          <view class="shops"  bindtap="details">
+            <image src="/pages/images/pics_5.jpg" mode="widthFix" class="pics"></image>
+            <view class="state">[农鲜生] 罗非鱼约1公斤 -宰杀需要备注</view>
+            <view class="coins">
+              <view class="nums">
+                  <image src="/pages/images/sele_5.png" class="no" mode="widthFix"></image>
+                  <text class="no">1</text>
+                  <image src="/pages/images/sele_3.png" mode="widthFix"  catchtap="addCommodity"></image>
+              </view>
+              <view class="pay">￥39.99</view>
+            </view>
+          </view>
+          <view class="shops"  bindtap="details">
+            <image src="/pages/images/pics_4.jpg" mode="widthFix" class="pics"></image>
+            <view class="state">[农鲜生] 罗非鱼约1公斤 -宰杀需要备注</view>
+            <view class="coins">
+              <view class="nums">
+                  <image src="/pages/images/sele_5.png" class="no" mode="widthFix"></image>
+                  <text class="no">1</text>
+                  <image src="/pages/images/sele_3.png" mode="widthFix"  catchtap="addCommodity"></image>
+              </view>
+              <view class="pay">￥39.99</view>
+            </view>
+          </view>
+          <view class="shops"  bindtap="details">
+            <image src="/pages/images/pics_5.jpg" mode="widthFix" class="pics"></image>
+            <view class="state">[农鲜生] 罗非鱼约1公斤 -宰杀需要备注</view>
+            <view class="coins">
+              <view class="nums">
+                  <image src="/pages/images/sele_5.png" class="no" mode="widthFix"></image>
+                  <text class="no">1</text>
+                  <image src="/pages/images/sele_3.png" mode="widthFix"  catchtap="addCommodity"></image>
+              </view>
+              <view class="pay">￥39.99</view>
+            </view>
+          </view>
+        </scroll-view>
+    </view>
+    <view class="m_xproduct top {{select==1?'z_show':''}}">
+        <view class="details">联系店主：田经理</view>
+        <view class="details">
+            <image src="/pages/images/tel.png" mode="widthFix"></image>
+            联系电话：138****8989
+        </view>
+        <view class="details">店铺地址：朝阳区望京银河地上101</view>
+        <view class="details">店铺简介：生活小超市，要什么都有</view>
+    </view>
+</view>
+<view class="m_xsettle" wx:if="{{cart}}">
+    <view class="show">
+      <view class="all">
+          <view class="dels">
+            <image src="/pages/images/del.png" mode="widthFix"></image>清空购物车
+          </view>
+          <view class="sele">
+            <image src="/pages/images/sele_1.png" mode="widthFix"></image>全选（已选3件）
+          </view>
+      </view>
+      <view class="shop">
+          <view class="nums">
+            <image src="/pages/images/sele_5.png" mode="widthFix" bindtap='cartRemove'></image>
+            <text>1</text>
+            <image src="/pages/images/sele_3.png" mode="widthFix"></image>
+          </view>
+          <view class="cont">
+            <image src="/pages/images/sele_1.png" class="sele" mode="widthFix"></image> 
+            <image src="/pages/images/pics_1.jpg" class="demo" mode="widthFix"></image> 
+            <view class="pay">
+                <text>[农鲜生] 罗非鱼约1公斤-宰杀需要备注</text>
+                <text class="red">￥39.99</text>
+            </view>
+          </view>
+      </view>
+    </view>
+    <view class="settle">
+        <button bindtap="accounts">去结算</button>
+        <view class="car">
+          <image src="/pages/images/shop_car.png" mode="widthFix"></image>
+          <text>3</text>
+        </view>
+        <view class="pice">￥39.99</view>
+    </view>
+</view>

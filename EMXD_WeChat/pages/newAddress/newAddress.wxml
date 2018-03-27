@@ -1,0 +1,21 @@
+<view class="m_xconstr">
+  <view class="rows">
+      <input type="text" placeholder="收货人" />
+  </view>
+  <view class="rows">
+      <input type="number" placeholder="联系方式" />
+  </view>
+  <view class="rows">
+      <input type="number" placeholder="省" />
+  </view>
+  <view class="rows">
+      <input type="number" placeholder="市" />
+  </view>
+  <view class="rows">
+      <input type="number" placeholder="区/县" />
+  </view>
+  <view class="rows">
+      <input type="text" placeholder="详细地址" />
+  </view>
+</view>
+<button class="m_xcome">保 存</button>

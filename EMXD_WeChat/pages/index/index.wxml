@@ -1,13 +1,47 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="m_xstore">
+    <view class="title">
+        <view class="as">店</view>
+        <text>最近的使用店铺</text>
+    </view>
+    <view class="send">
+        <view class="shop" bindtap="shopST">24小时配送便利店</view>
+        <view class="shop" bindtap="shopST">24小时配送便利店</view>
+    </view>
+</view>
+<view class="m_xstore">
+    <view class="title">
+        <view class="as">A</view>
+        <text>店铺</text>
+    </view>
+    <view class="send">
+        <view class="shop" bindtap="shopST">24小时配送便利店</view>
+        <view class="shop" bindtap="shopST">24小时配送便利店</view>
+    </view>
+</view>
+<view class="m_xnums">
+    <view class="letter">#</view>
+    <view class="letter">A</view>
+    <view class="letter">B</view>
+    <view class="letter">C</view>
+    <view class="letter">D</view>
+    <view class="letter">E</view>
+    <view class="letter">F</view>
+    <view class="letter">G</view>
+    <view class="letter">H</view>
+    <view class="letter">I</view>
+    <view class="letter">J</view>
+    <view class="letter">K</view>
+    <view class="letter">L</view>
+    <view class="letter">M</view>
+    <view class="letter">N</view>
+    <view class="letter">O</view>
+    <view class="letter">P</view>
+    <view class="letter">Q</view>
+    <view class="letter">R</view>
+    <view class="letter">S</view>
+    <view class="letter">T</view>
+    <view class="letter">W</view>
+    <view class="letter">X</view>
+    <view class="letter">Z</view>
 </view>

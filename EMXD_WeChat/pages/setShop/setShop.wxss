@@ -1,0 +1,67 @@
+page{background:#f4f3f4;}
+
+/* m_xcome */
+.m_xcome{
+  width:90%;
+  background:#fc6466;
+  text-align:center;
+  font-size:28rpx;
+  color:#fff;
+  border:none;
+  border-radius:0;
+  height:80rpx;
+  line-height:80rpx;
+  margin:26rpx auto;
+}
+
+.m_xsettled{
+  background:#fff;
+}
+.m_xsettled .title{
+  height:88rpx;
+}
+.m_xsettled .title,
+.m_xsettled .line{
+  padding:0 24rpx;
+  font-size:24rpx;
+  color:#6d6d6d;
+  line-height:88rpx;
+  border-bottom:1px solid #f4f3f4;
+  overflow:hidden;
+}
+.m_xsettled .line text{
+  float:left;
+}
+.m_xsettled .import{
+  float:left;
+  width:80%;
+}
+.m_xsettled .nall{
+  width:60%;
+}
+.m_xsettled .import .text{
+  display:block;
+  width: 100%;
+  height:88rpx;
+  line-height:88rpx;
+}
+.m_xsettled .import textarea{
+  display:block;
+   padding-top:26rpx; 
+  line-height:40rpx;
+  height:150rpx;
+  marin-bottom:14rpx;
+}
+.m_xsettled .line button{
+  float:right;
+  height:54rpx;
+  line-height:54rpx;
+  width:132rpx;
+  font-size:22rpx;
+  color:#fff;
+  background:#fc6466;
+  border:none;
+  border-radius:0;
+  padding:0;
+  margin:17rpx 0 0;
+}

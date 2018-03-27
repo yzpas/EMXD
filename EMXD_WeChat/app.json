@@ -1,12 +1,56 @@
 {
   "pages":[
+    
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/shopaddClassify/shopaddClassify",
+    "pages/logs/logs",
+    "pages/setShop/setShop",
+    "pages/Individual/Individual",
+    "pages/location/location",
+    "pages/newAddress/newAddress",
+    "pages/settle/settle",
+    "pages/order/order",
+    "pages/nodata/nodata",
+    "pages/orderDetails/orderDetails",
+    "pages/productDetails/productDetails",
+    "pages/deliver/deliver",
+    "pages/sellDetails/sellDetails",
+    "pages/winDeposit/winDeposit",
+    "pages/sellorder/sellorder",
+    "pages/sellorderMan/sellorderMan",
+    "pages/incomePair/incomePair",
+    "pages/shopClassify/shopClassify",
+    "pages/user/index",
+    "pages/user/store/store",
+    "pages/user/store/management/management",
+    "pages/commodity/commodity",
+    "pages/user/store/commodityManage/commodityManage"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "鹅毛小店",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/images/home_1.png",
+        "selectedIconPath": "pages/images/home_2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "pages/images/home_3.png",
+        "selectedIconPath": "pages/images/home_4.png",
+        "text": "我的"
+      }
+    ],
+    "color": "#a0a0a0",
+    "selectedColor": "#fc6466",
+    "position": "bottom",
+    "backgroundColor": "#fff",
+    "borderStyle": "#dedede"
   }
 }

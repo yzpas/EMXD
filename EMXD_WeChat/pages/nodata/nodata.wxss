@@ -1,0 +1,4 @@
+page{background:#f4f3f4;}
+
+/* m_xnodata */
+.m_xnodata{height:95rpx;line-height:95rpx;overflow:hidden;padding:0 27rpx;color:#6d6d6d;font-size:24rpx;background:#fff;margin-top:2rpx;}

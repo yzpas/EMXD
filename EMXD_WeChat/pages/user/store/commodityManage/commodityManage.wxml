@@ -1,0 +1,150 @@
+<view class="page public_grey_bg">
+  <!--头部  -->
+   <view class='manage_tab'>
+      <view class='tabli {{currentTab==0 ? "select" : "tabli"}}' data-id='0' bindtap='tab'>出售中(100)</view>
+      <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>已下架(10)</view>
+      <view class='tabli {{currentTab==2 ? "select" : "tabli"}}' data-id='2' bindtap='tab'>已删除(10)</view>
+   </view>
+   <!-- 内容 -->
+   <view class='manage_main'>
+      <view class='tab_main {{currentTab==0 ? "displayB" : "tab_main"}}'>
+          <view class='tab_list'>
+              <view class='list_top'>
+                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
+                  <view class='list_text'>
+                    <view class='text_title'>[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
+                    <view class='text_money'>售价：<text>￥39.99</text></view>
+                  </view>
+                  <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image>
+                  <!-- <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> -->
+              </view>
+              <view class='list_bom'>
+                <view class='putaway_box'>
+                  <view class='putaway'>下架</view>
+                  <view class='putaway colerSelect'>上架</view>
+                </view>
+                <view class='compile'>编  辑</view>
+              </view>
+          </view>
+          <view class='tab_list'>
+              <view class='list_top'>
+                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
+                  <view class='list_text'>
+                    <view class='text_title'>1[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
+                    <view class='text_money'>售价：<text>￥39.99</text></view>
+                  </view>
+                  <!-- <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image> -->
+                   <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> 
+              </view>
+              <view class='list_bom'>
+                <view class='putaway_box'>
+                  <view class='putaway'>下架</view>
+                  <view class='putaway colerSelect'>上架</view>
+                </view>
+                <view class='compile'>编  辑</view>
+              </view>
+          </view>
+      </view>
+
+      <view class='tab_main {{currentTab==1 ? "displayB" : "tab_main"}}'>
+          <view class='tab_list'>
+              <view class='list_top'>
+                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
+                  <view class='list_text'>
+                    <view class='text_title'>2[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
+                    <view class='text_money'>售价：<text>￥39.99</text></view>
+                  </view>
+                  <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image>
+                  <!-- <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> -->
+              </view>
+              <view class='list_bom'>
+                <view class='putaway_box'>
+                  <view class='putaway'>下架</view>
+                  <view class='putaway colerSelect'>上架</view>
+                </view>
+                <view class='compile'>编  辑</view>
+              </view>
+          </view>
+          <view class='tab_list'>
+              <view class='list_top'>
+                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
+                  <view class='list_text'>
+                    <view class='text_title'>1[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
+                    <view class='text_money'>售价：<text>￥39.99</text></view>
+                  </view>
+                  <!-- <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image> -->
+                   <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> 
+              </view>
+              <view class='list_bom'>
+                <view class='putaway_box'>
+                  <view class='putaway'>下架</view>
+                  <view class='putaway colerSelect'>上架</view>
+                </view>
+                <view class='compile'>编  辑</view>
+              </view>
+          </view>
+      </view>
+
+      <view class='tab_main {{currentTab==2 ? "displayB" : "tab_main"}}'>
+          <view class='tab_list'>
+              <view class='list_top'>
+                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
+                  <view class='list_text'>
+                    <view class='text_title'>3[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
+                    <view class='text_money'>售价：<text>￥39.99</text></view>
+                  </view>
+                  <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image>
+                  <!-- <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> -->
+              </view>
+              <view class='list_bom'>
+                <view class='putaway_box'>
+                  <view class='putaway'>下架</view>
+                  <view class='putaway colerSelect'>上架</view>
+                </view>
+                <view class='compile'>编  辑</view>
+              </view>
+          </view>
+          <view class='tab_list'>
+              <view class='list_top'>
+                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
+                  <view class='list_text'>
+                    <view class='text_title'>1[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
+                    <view class='text_money'>售价：<text>￥39.99</text></view>
+                  </view>
+                  <!-- <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image> -->
+                   <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> 
+              </view>
+              <view class='list_bom'>
+                <view class='putaway_box'>
+                  <view class='putaway'>下架</view>
+                  <view class='putaway colerSelect'>上架</view>
+                </view>
+                <view class='compile'>编  辑</view>
+              </view>
+          </view>
+      </view>
+   </view>
+
+   <!--底部  -->
+   <view class='manage_bom'>
+      <view class='manage_bom_one'>
+          <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon2'></image>
+          <text class='one_text'>全选</text>
+          <view class='one_rf rf'>
+            
+            <view class='one_list'>
+                <image src='/pages/images/y-icon13.png' mode='aspectFit' class='list_icon3'></image>
+                <view class='one_list_text'>下架</view>
+            </view>
+            <view class='one_list'>
+                <image src='/pages/images/y-icon12.png' mode='aspectFit' class='list_icon3'></image>
+                <view class='one_list_text'>置顶</view>
+            </view>
+          </view>
+      </view>
+      <view class='manage_bom_to'>
+          <view class='manage_bom_to_btn lf'>添加商品</view>
+          <view class='manage_bom_to_btn rf'>批量管理</view>
+      </view>
+   </view>
+</view>

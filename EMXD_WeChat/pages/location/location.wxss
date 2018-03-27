@@ -1,0 +1,11 @@
+page{background:#f4f3f4;}
+.m_xtitle{padding:20rpx 28rpx 12rpx;font-size:20rpx;color:#6d6d6d;line-height:30rpx;}
+
+/* m_xtabs */
+.m_xsite{overflow:hidden;padding:16rpx 28rpx;color:#6d6d6d;font-size:28rpx;background:#fff;position:relative;}
+.m_xsite .pet{font-size:24rpx;color:#6d6d6d;line-height:44rpx;}
+.m_xsite .pet text{display:inline-block;padding-right:70rpx;}
+.m_xsite image{width:32rpx;height:32rpx;position:absolute;top:50%;right:30rpx;margin-top:-16rpx;}
+
+/* m_xcome */
+.m_xcome{position:fixed;width:90%;left:5%;bottom:30rpx;background:#fc6466;text-align:center;font-size:28rpx;color:#fff;border:none;border-radius:0;height:80rpx;line-height:80rpx;}

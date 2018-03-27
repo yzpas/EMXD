@@ -1,0 +1,65 @@
+page{background:#f4f3f4;}
+
+/* m_xsend */
+.m_xsend{background:#fff;margin-top:16rpx;}
+.m_xsend .cont{overflow:hidden;padding:10rpx 14rpx 16rpx 12rpx;position:relative;border-bottom:1px solid #efeeef;}
+.m_xsend .cont .demo{float:left;width:114rpx;margin-top:10rpx;}
+.m_xsend .cont .pay{margin:26rpx 0 0 134rpx;}
+.m_xsend .cont .nuns{font-size:16rpx;color:#585858;line-height:30rpx;}
+.m_xsend .cont .red{color:#fc6466;font-size:22rpx;padding-top:6rpx;}
+.m_xsend .cont .red text{font-size:16rpx;color:#585858;padding-right:8rpx;float:right;}
+.m_xsend .moeny{position:absolute;font-size:22rpx;color:#585858;right:20rpx;bottom:12rpx;}
+.m_xsend .title{overflow:hidden;line-height:56rpx;height:56rpx;border-bottom:1px solid #efeeef;padding:0 20rpx 0 25rpx;font-size:24rpx;color:#6d6d6d;font-weight:bold;}
+.m_xsend .title text{float:right;font-weight:normal;font-size:20rpx;}
+.m_xsend .title .demo{display:inline-block;width:36rpx;vertical-align:middle;margin:0 0 0 24rpx;}
+.m_xsend .remark{height:60rpx;line-height:60rpx;font-size:16rpx;color:#585858;padding: 0 28rpx;border-bottom:1px solid #efeeef;overflow:hidden;}
+.m_xsend .total{text-align:right;border-bottom:none;font-size:18rpx;color:#fc6466;line-height:40rpx;height:40rpx;}
+.m_xsend .total text{float:left;color:#6d6d6d;}
+.m_xsend .top{padding-top:10rpx;}
+.m_xsend .bottom{padding-bottom:10rpx;color:#6d6d6d;}
+
+/* m_xnews */
+.m_xnews .title{
+  font-size:24rpx;
+  color:#6d6d6d;
+  height:68rpx;
+  line-height:68rpx;
+  overflow:hidden;
+  padding:0 24rpx;
+}
+.m_xnews .mains{
+  background:#fff;
+  border-bottom:1rpx #efeeef solid;
+  overflow:hidden;
+  padding:20rpx 16rpx;
+  font-size:18rpx;
+  color:#6d6d6d;
+}
+.m_xnews .mains text{
+  float:left;
+  width:84rpx;
+}
+.m_xnews .ruins{
+  margin-left:84rpx;
+}
+.m_xnews .nub{
+  line-height:28rpx;
+}
+
+/* m_xcancel */
+.m_xcancel{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  height:80rpx;
+  line-height:80rpx;
+  font-size:18rpx;
+  color:#6d6d6d;
+  border-radius:0;
+  text-align:center;
+}
+.m_xpadd{
+  margin-bottom:100rpx;
+}

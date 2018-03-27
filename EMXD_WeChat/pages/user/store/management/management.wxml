@@ -1,0 +1,25 @@
+<!--pages/user/store/management/management.wxml-->
+<view class='page public_grey_bg'>
+    <view class='management_box'>
+      <view class='management_list'>
+        <view class='list_lf lf'>店铺名称</view>
+        <input class='list_rf rf' type='text' placeholder='请输入店铺名字'/>
+      </view>
+      <view class='management_list'>
+        <view class='list_lf lf'>店铺头像</view>
+        <view class='list_rf rf'></view>
+      </view>
+      <view class='management_list'>
+        <view class='list_lf lf'>认证信息</view>
+        <view class='list_rf rf'><image src='/pages/images/y-icon11.png' mode='aspectFit' class='management_icon'></image></view>
+      </view>
+      <view class='management_list'>
+        <view class='list_lf lf'>店铺二维码分享</view>
+        <view class='list_rf rf'><image src='/pages/images/y-icon11.png' mode='aspectFit' class='management_icon1'></image></view>
+      </view>
+      <view class="section">
+        <textarea bindblur="bindTextAreaBlur" placeholder-class="section_text" placeholder="店铺简介" />
+      </view>
+    </view>
+    <view class='management_btn'>确  定</view>
+</view>
