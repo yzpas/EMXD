@@ -1,5 +1,5 @@
 <view class="page public_grey_bg">
-  <view class='store_header'>
+  <!-- <view class='store_header'>
     <view class='store lf'>
       <image src='/pages/images/y-icon1.png' class='store_icon' mode='aspectFit'></image>
       <view class='store_text'>我的店铺</view>
@@ -7,7 +7,7 @@
     <view class='store rf'>
       <view class='stor_time'>2018-03-18</view>
     </view>
-  </view>
+  </view> -->
   <!--main  -->
   <view class='store_main'>
     <view class='store_main_top'>
@@ -15,7 +15,7 @@
         <view class='money_text'>可提现(元)</view>
         <view class='money_number'>2997</view>
       </view>
-      <view class='deposit_btn' bindtap='winDeposit'>提现</view>
+      <view class='deposit_btn' bindtap='deposit'>提现</view>
     </view>
     <view class='store_main_bottom'>
       <view class='store_main_bottom_li'>
@@ -66,15 +66,15 @@
 
   <!--tab  -->
   <view class='tab'>
-    <view class='tab_li'>
-        <image src='/pages/images/y-icon8-1.png' mode='aspectFit' class='tab_li_icon'></image>
-        <view class='tab_li_text'>首页</view>
+    <view class='tab_li' bindtap='Goindex'>
+        <image src='/pages/images/home_2.png' mode='aspectFit' class='tab_li_icon'></image>
+        <view class='tab_li_text selectOn'>首页</view>
     </view>
-    <view class='tab_li'>
+    <view class='tab_li' bindtap='sellorder'>
         <image src='/pages/images/y-icon9-1.png' mode='aspectFit' class='tab_li_icon'></image>
         <view class='tab_li_text'>订单</view>
     </view>
-    <view class='tab_li'>
+    <view class='tab_li' bindtap='Gouser'>
         <image src='/pages/images/y-icon10-1.png' mode='aspectFit' class='tab_li_icon'></image>
         <view class='tab_li_text'>我的</view>
     </view>

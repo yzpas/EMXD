@@ -3,19 +3,19 @@ page{background:#f4f3f4;}
 /* m_xsend */
 .m_xsend{background:#fff;margin-top:16rpx;}
 .m_xsend .title{overflow:hidden;line-height:56rpx;height:56rpx;border-bottom:1px solid #efeeef;padding:0 20rpx 0 25rpx;font-size:24rpx;color:#6d6d6d;font-weight:bold;}
-.m_xsend .title text{float:right;font-weight:normal;font-size:20rpx;}
+.m_xsend .title text{float:right;font-weight:normal;}
 .m_xsend .title .red{color:#fc6466;}
 .m_xsend .design{overflow:hidden;padding:12rpx 18rpx;border-bottom:1px solid #efeeef;}
 .m_xsend .design .all{width:76%;overflow:hidden;height:100rpx;}
 .m_xsend .design .demo{float:left;width:21%;margin-right:4%;height:100%;}
 .m_xsend .design .more{float:right;width:4.4%;margin-right:3.2%;}
 .m_xsend .design .pays{float:right;margin-right:2.5%;text-align:right;padding-top:10rpx;}
-.m_xsend .design .pays text{display:block;font-size:22rpx;color:#fc6466;line-height:53rpx;}
-.m_xsend .design .pays .letter{font-size:16rpx;color:#585858;}
+.m_xsend .design .pays text{display:block;font-size:24rpx;color:#fc6466;line-height:53rpx;}
+.m_xsend .design .pays .letter{font-size:24rpx;color:#585858;}
 .m_xsend .take{overflow:hidden;padding:18rpx 16rpx;}
-.m_xsend .take .btns{float:right;width:13%;height:42rpx;line-height:42rpx;text-align:center;background:#fc595b;font-size:18rpx;color:#fff;}
+.m_xsend .take .btns{float:right;width:16%;height:42rpx;line-height:42rpx;text-align:center;background:#fc595b;font-size:22rpx;color:#fff;}
 .m_xsend .take .gray{background:#efeeef;color:#585858;float:left;}
 .m_xsend .take text{display:inline-block;font-size:18rpx;color:#6d6d6d;}
-.m_xsend .remark{height:66rpx;line-height:66rpx;font-size:16rpx;color:#585858;padding: 0 16rpx;border-bottom:1px solid #efeeef;text-align:right;}
-.m_xsend .total{text-align:right;font-size:18rpx;color:#fc6466;}
+.m_xsend .remark{height:76rpx;line-height:76rpx;font-size:24rpx;color:#585858;padding: 0 16rpx;border-bottom:1px solid #efeeef;text-align:right;}
+.m_xsend .total{text-align:right;font-size:24rpx;color:#fc6466;}
 .m_xsend .total text{float:left;color:#6d6d6d;}

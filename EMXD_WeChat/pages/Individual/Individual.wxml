@@ -107,6 +107,7 @@
         <view class="details">店铺简介：生活小超市，要什么都有</view>
     </view>
 </view>
+<view class='popup' bindtap='popup' wx:if="{{cart}}"></view>
 <view class="m_xsettle" wx:if="{{cart}}">
     <view class="show">
       <view class="all">

@@ -12,16 +12,17 @@ page{background:#f4f4f4;}
 .m_xwhite .slide-image{display:block;width:100%;height:100%;}
 
 /* m_xprice */
-.m_xprice{font-size:30rpx;background:#fc6466;height:94rpx;line-height:94rpx;padding:0 2.7%;color:#fff;}
+.m_xprice{font-size:30rpx;background:#fff;height:94rpx;line-height:94rpx;padding:0 2.7%;color:#fc6466;overflow:hidden;}
 .m_xprice text{font-size:60rpx;}
+.m_xprice .add{float:right;width:150rpx;height:54rpx;line-height:54rpx;text-align:center;background:#fc6466;color:#fff;font-size:24rpx;border:none;border-radius:0;margin:20rpx 0 0 2rpx;}
 
 /* m_xstate */
-.m_xstate{font-size:28rpx;color:#5e5e5e;line-height:40rpx;padding:10rpx 2.5%;background:#fff;margin:6rpx 0 14rpx;}
+.m_xstate{font-size:28rpx;color:#5e5e5e;line-height:40rpx;padding:16rpx 2.5%;background:#fff;margin:6rpx 0 14rpx;}
 
 /* m_xdetail */
 .m_xdetail{background:#fff;padding:0 20rpx;}
-.m_xdetail .title{font-size:24rpx;color:#5e5e5e;padding:14rpx 0;line-height:40rpx;}
-.m_xdetail .truth{font-size:30rpx;color:#5e5e5e;line-height:46rpx;padding-bottom:10rpx;min-height:220rpx;position:relative;}
+.m_xdetail .title{font-size:28rpx;color:#5e5e5e;padding:14rpx 0;line-height:40rpx;}
+.m_xdetail .truth{font-size:32rpx;color:#5e5e5e;line-height:46rpx;padding-bottom:10rpx;min-height:220rpx;position:relative;}
 .m_xdetail .truth text{display:block;}
 .m_xdetail .truth image{position:absolute;width:72rpx;right:0;top:60rpx;}
 
@@ -51,7 +52,7 @@ page{background:#f4f4f4;}
 .m_xsettle .car{position:relative;width:76rpx;height:76rpx;margin:12rpx 16rpx 0;float:left;}
 .m_xsettle .car image{display:block;width:100%;cursor:pointer;}
 .m_xsettle .car text{position:absolute;width:32rpx;line-height:32rpx;height:32rpx;text-align:center;overflow:hidden;background:#ff9596;border-radius:50%;font-size:20rpx;color:#fff;top:-6rpx;right:-10rpx;}
-.m_xsettle .pice{float:left;font-size:32rpx;color:#fc6466;padding:46rpx 0 0 30rpx;}
+.m_xsettle .pice{float:left;font-size:34rpx;color:#fc6466;padding:46rpx 0 0 30rpx;}
 
 /* m_xpopups */
 .m_xpopups{position:fixed;top:0;left:0;z-index:6;background:rgba(0,0,0,.65);width:100%;height:100%;}

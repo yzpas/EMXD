@@ -47,7 +47,7 @@
   float: left;
 }
 .money_text{
-  font-size: 20rpx;
+  font-size: 24rpx;
   color: #6d6d6d;
   margin-left: 4rpx;
 }
@@ -61,7 +61,7 @@
   text-align: center;
   line-height: 40rpx;
   background-color: #fc6466;
-  font-size: 16rpx;
+  font-size: 22rpx;
   color: #fff;
   border-radius: 0;
   float: left;
@@ -79,7 +79,7 @@
   box-sizing: border-box;
 }
 .li_title{
-  font-size: 20rpx;
+  font-size: 22rpx;
   color: #6d6d6d;
   padding-bottom: 20rpx;
 }
@@ -106,7 +106,7 @@
 }
 .entrance_text{
   text-align: center;
-  font-size: 18rpx;
+  font-size: 24rpx;
   color: #999999;
 }
 .tab{
@@ -123,13 +123,16 @@
 
 }
 .tab_li_icon{
-  width: 50rpx;
-  height: 50rpx;
+  width: 56rpx;
+  height: 56rpx;
   display: block;
-  margin: 6rpx auto;
+  margin: 6rpx auto 0;
 }
 .tab_li_text{
   text-align: center;
   font-size: 18rpx;
   color: #a0a0a0;
+}
+.selectOn{
+  color: #fc6466;
 }

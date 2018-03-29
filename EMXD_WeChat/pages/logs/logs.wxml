@@ -10,6 +10,9 @@
     <view class="our" bindtap='store'>
         <image src="../images/trian.png"></image>我的店铺
     </view>
+    <view class="our" bindtap='setShop'>
+        <image src="../images/trian.png"></image>我要开店
+    </view>
     <view class="our" bindtap='order'>
         <image src="../images/trian.png"></image>我买到的
     </view>

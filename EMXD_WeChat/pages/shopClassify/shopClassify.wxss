@@ -6,7 +6,7 @@ page{background:#f4f3f4;}
   height:96rpx;
   line-height:96rpx;
   color:#6d6d6d;
-  font-size:24rpx;
+  font-size:28rpx;
   padding:0 28rpx;
   margin-bottom:2rpx;
 }

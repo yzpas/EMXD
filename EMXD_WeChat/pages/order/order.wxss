@@ -2,30 +2,30 @@ page{background:#f4f3f4;}
 
 /* m_xsend */
 .m_xsend{background:#fff;margin-top:16rpx;}
-.m_xsend .title{overflow:hidden;line-height:56rpx;height:56rpx;border-bottom:1px solid #efeeef;padding:0 20rpx 0 25rpx;font-size:24rpx;color:#6d6d6d;font-weight:bold;}
-.m_xsend .title text{float:right;font-weight:normal;font-size:20rpx;}
+.m_xsend .title{overflow:hidden;line-height:60rpx;height:60rpx;border-bottom:1px solid #efeeef;padding:0 20rpx 0 25rpx;font-size:24rpx;color:#6d6d6d;font-weight:bold;}
+.m_xsend .title text{float:right;font-weight:normal;font-size:24rpx;}
 .m_xsend .title .red{color:#fc6466;}
 .m_xsend .design{overflow:hidden;padding:12rpx 18rpx;border-bottom:1px solid #efeeef;}
 .m_xsend .design .all{width:76%;overflow:hidden;height:100rpx;}
 .m_xsend .design .demo{float:left;width:21%;margin-right:4%;height:100%;}
 .m_xsend .design .more{float:right;width:4.4%;margin-right:3.2%;}
 .m_xsend .design .pays{float:right;margin-right:2.5%;text-align:right;padding-top:10rpx;}
-.m_xsend .design .pays text{display:block;font-size:22rpx;color:#fc6466;line-height:53rpx;}
-.m_xsend .design .pays .letter{font-size:16rpx;color:#585858;}
+.m_xsend .design .pays text{display:block;font-size:24rpx;color:#fc6466;line-height:53rpx;}
+.m_xsend .design .pays .letter{font-size:22rpx;color:#585858;}
 .m_xsend .wait{padding:14rpx 18rpx;}
 .m_xsend .wait .money{float:left;width:37rpx;margin-top:18rpx;}
 .m_xsend .wait .conve{margin-left:60rpx;background:#efeeef;padding:12rpx 20rpx;border-radius:7rpx;position:relative;}
-.m_xsend .wait .conve text{display:block;font-size:16rpx;color:#6d6d6d;line-height:28rpx;}
+.m_xsend .wait .conve text{display:block;font-size:24rpx;color:#6d6d6d;line-height:34rpx;}
 .m_xsend .wait .tr{position:absolute;width:12rpx;height:14rpx;left:-10rpx;top:50%;margin-top:-7rpx;}
 .m_xsend .unit{margin-left:60rpx;}
 .m_xsend .unit .all{padding:30rpx 0 10rpx 0;}
 .m_xsend .wait .unit .pays{padding-top:0;}
 
 .m_xsend .take{overflow:hidden;padding:16rpx;}
-.m_xsend .take .btns{float:right;width:13%;height:42rpx;line-height:42rpx;text-align:center;background:#fc595b;font-size:18rpx;color:#fff;margin-left:12rpx;}
+.m_xsend .take .btns{float:right;width:15%;height:42rpx;line-height:42rpx;text-align:center;background:#fc595b;font-size:22rpx;color:#fff;margin-left:12rpx;}
 .m_xsend .take .gray{background:#efeeef;color:#585858;}
-.m_xsend .take text{display:inline-block;font-size:18rpx;color:#6d6d6d;}
-.m_xsend .remark{height:66rpx;line-height:66rpx;font-size:16rpx;color:#585858;padding: 0 16rpx;border-bottom:1px solid #efeeef;text-align:right;}
+.m_xsend .take text{display:inline-block;font-size:24rpx;color:#6d6d6d;}
+.m_xsend .remark{height:74rpx;line-height:74rpx;font-size:24rpx;color:#585858;padding: 0 16rpx;border-bottom:1px solid #efeeef;text-align:right;}
 
 
 

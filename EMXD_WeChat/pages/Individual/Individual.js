@@ -29,7 +29,7 @@ Page({
    */
   details: function () {
     wx.navigateTo({
-      url: '../productDetails/productDetails'
+      url: '/pages/productDetails/productDetails'
     })
   },
   // 点击添加商品
@@ -47,6 +47,12 @@ Page({
       cart: false
     })
   },
+  popup:function(){
+    let that = this;
+    that.setData({
+      cart: false
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -56,13 +62,13 @@ Page({
    // 去结算
     accounts: function () {
       wx.navigateTo({
-        url: '../settle/settle'
+        url: '/pages/settle/settle'
       })
     },
     Gouser:function (){
       console.log(1);
-      wx.redirectTo({
-        url: '../logs/logs'
+      wx.switchTab ({
+        url: '/pages/logs/logs'
       })
     },
   /**

@@ -35,6 +35,11 @@ Page({
       url: '/pages/order/order'
     })
   },
+  setShop:function(){
+    wx.navigateTo({
+      url: '/pages/setShop/setShop'
+    })
+  },
   opinion:function(){
     wx.makePhoneCall({
       phoneNumber: '1340000' //仅为示例，并非真实的电话号码

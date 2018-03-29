@@ -8,7 +8,10 @@
     </block>
   </swiper>
 
-  <view class="m_xprice">￥<text>9</text>.90</view>
+  <view class="m_xprice">
+    <view class="add" bindtap="addCart">加入购物车</view>
+    ￥<text>9</text>.90
+  </view>
   <view class="m_xstate">泰国white芦荟洗发水,男女通用，一瓶装22克泰国white芦荟洗发水,男女通用，一瓶装22克</view>
   <view class="m_xdetail">
     <view class="title">商品详情</view>
@@ -47,7 +50,7 @@
     </view>
     <view class="settle">
         <button bindtap="accounts">去结算</button>
-        <button class="add" bindtap="addCart">加入购物车</button>
+        
         <view class="car">
           <image src="/pages/images/shop_car.png" mode="widthFix"></image>
           <text>3</text>

@@ -1,5 +1,48 @@
 <view class="page public_grey_bg">
   <view class='add_top'>
-     
+     <view class="title">商品图片</view>
+     <view class="pics">
+        <view class="upolad">
+            <image src="/pages/images/add.png" class="add" mode="widthFix"></image> 
+        </view>
+        <view class="print">
+            <image src="/pages/images/del_2.png" class="del" mode="widthFix"></image> 
+            <image src="/pages/images/head.jpg" class="demo" mode="widthFix"></image> 
+        </view>
+     </view>
+  </view>
+  <view class="import">
+      <input type="text" placeholder="输入商品标题" />
+  </view>
+  <view class="m_xprice">
+    <view class="project">
+      <view class="abs">
+        <view class="nums">价格<text>9.09</text></view>
+      </view>
+      <view class="abs">
+        <view class="nums">库存<text>100000</text></view>
+      </view>
+      <view class="abs top">
+        <view class="nums">规格<text>XL</text></view>
+      </view>
+    </view>
+    <view class="operate">
+        <image src="/pages/images/sele_6.png" class="sele" mode="widthFix"></image>
+        <view class="bus">
+          <image src="/pages/images/sele_4.png" class="sele" mode="widthFix"></image> 
+        </view>
+    </view>
+  </view>
+  <view class="m_xtabs">
+    <view class="our" bindtap='store'>
+        <image src="/pages/images/trian.png"></image>
+        <text>烟酒</text>分类
+    </view>
+    <view class="edit">
+      <textarea placeholder="商品图文描述编辑" />
+    </view>
+  </view>
+  <view class="m_xbtns">
+    <button class="m_xcome" bindtap="address">提交</button>
   </view>
 </view>

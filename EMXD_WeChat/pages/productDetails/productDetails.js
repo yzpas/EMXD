@@ -26,7 +26,7 @@ Page({
     indicatorDots: true,
     autoplay: false,
     interval: 5000,
-    duration: 1000,
+    duration: 500,
     select_specification:false, //选择规格
   },
 

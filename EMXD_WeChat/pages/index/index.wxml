@@ -5,8 +5,12 @@
         <text>最近的使用店铺</text>
     </view>
     <view class="send">
-        <view class="shop" bindtap="shopST">24小时配送便利店</view>
-        <view class="shop" bindtap="shopST">24小时配送便利店</view>
+        <view class="shop" bindtap="shopST">
+          <image src="../images/demo.jpg"></image>24小时配送便利店
+        </view>
+        <view class="shop" bindtap="shopST">
+          <image src="../images/demo.jpg"></image>24小时配送便利店
+        </view>
     </view>
 </view>
 <view class="m_xstore">
@@ -15,8 +19,12 @@
         <text>店铺</text>
     </view>
     <view class="send">
-        <view class="shop" bindtap="shopST">24小时配送便利店</view>
-        <view class="shop" bindtap="shopST">24小时配送便利店</view>
+        <view class="shop" bindtap="shopST">
+          <image src="../images/demo.jpg"></image>24小时配送便利店
+        </view>
+        <view class="shop" bindtap="shopST">
+          <image src="../images/demo.jpg"></image>24小时配送便利店
+        </view>
     </view>
 </view>
 <view class="m_xnums">

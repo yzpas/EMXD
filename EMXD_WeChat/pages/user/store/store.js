@@ -14,6 +14,17 @@ Page({
   onLoad: function (options) {
   
   },
+  Goindex: function () {
+    console.log(1);
+    wx.switchTab ({
+      url: '/pages/index/index'
+    })
+  },
+  Gouser: function () {
+    wx.switchTab ({
+      url: '/pages/logs/logs'
+    })
+  },
   management:function(){
     console.log(1);
     wx.navigateTo({
@@ -40,9 +51,20 @@ Page({
       url: '/pages/shopaddClassify/shopaddClassify'
     })
   },
-  winDeposit: function () {
+  deposit: function () {
     wx.navigateTo({
       url: '/pages/winDeposit/winDeposit'
+    })
+    
+  },
+  winDeposit: function () {
+    wx.navigateTo({
+      url: '/pages/incomePair/incomePair'
+    })
+  },
+  sellorder: function () {
+    wx.navigateTo({
+      url: '/pages/sellorder/sellorder'
     })
   },
   /**

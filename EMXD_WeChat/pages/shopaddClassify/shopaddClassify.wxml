@@ -10,7 +10,7 @@
     <text>分类2</text>
   </view>
 </view>
-<button class="m_xcome" bindtap="address">新建收货地址</button>
+<button class="m_xcome" bindtap="address">添加商品分类</button>
 
 <view class="m_xpopup on">
   <view class="m_xconfirm">           

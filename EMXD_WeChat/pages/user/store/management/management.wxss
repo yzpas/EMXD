@@ -13,12 +13,12 @@
   box-sizing: border-box;
 }
 .list_lf{
-  font-size: 24rpx;
+  font-size: 28rpx;
   color: #6d6d6d;
   font-weight: bold;
 }
 .list_rf{
-  font-size: 24rpx;
+  font-size: 28rpx;
   height: 88rpx;
   line-height: 88rpx;
   width: 400rpx;
@@ -50,6 +50,7 @@
 .section textarea{
   width: 100%;
   line-height: 30rpx;
+  font-size:28rpx;
 }
 .management_btn{
   width: 678rpx;
@@ -57,7 +58,7 @@
   text-align: center;
   line-height: 90rpx;
   background-color: #fc6466;
-  font-size: 28rpx;
+  font-size: 32rpx;
   color: #fff;
   margin: 22rpx auto;
 }
