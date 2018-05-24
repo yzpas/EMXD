@@ -1,21 +1,52 @@
-<view class="m_xconstr">
-  <view class="rows">
-      <input type="text" placeholder="收货人" />
-  </view>
-  <view class="rows">
-      <input type="number" placeholder="联系方式" />
-  </view>
-  <view class="rows">
-      <input type="number" placeholder="省" />
-  </view>
-  <view class="rows">
-      <input type="number" placeholder="市" />
-  </view>
-  <view class="rows">
-      <input type="number" placeholder="区/县" />
-  </view>
-  <view class="rows">
-      <input type="text" placeholder="详细地址" />
-  </view>
+<view >
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="m_xconstr">
+      <view class="rows">
+        <input type="text" name="user_name"  placeholder="请输入收货人" value='{{user_name}}'/>
+      </view>
+      <view class="rows">
+        <input type="number" name="telephone"  placeholder="请输入手机号码" value='{{telephone}}' />
+      </view>
+      <view class="rows">
+        <picker bindchange="provincechange" value="{{id}}" range="{{province_arr}}" range-key='name' bindtap='Clickprovince'>
+          <!-- <input placeholder="请输入省" value='{{province_arr[id].name}}'  disabled='true'/> -->
+          <!-- <view class="picker" wx:if="">省</view>  -->
+          <block wx:if="{{provinceArr}}">
+            <view class="picker" >{{province}}</view>
+          </block> 
+          <block wx:else>
+              <view class="picker" >{{province_arr[id].name}}</view> 
+          </block> 
+        
+        </picker>
+      </view>
+      <view class="rows">
+        <picker bindchange="citychange" value="{{cityid}}" range="{{city_arr}}" range-key="{{'name'}}">
+          <!-- <input placeholder="请输入市" value='{{city_arr[id].name}}'  disabled='true'/> -->
+          <block wx:if="{{cityArr}}">
+            <view class="picker" >{{city}}</view>
+          </block> 
+          <block wx:else>
+            <view class="picker">{{city_arr[cityid].name}}</view>
+          </block>  
+        </picker>
+      </view>
+      <view class="rows">
+        <picker bindchange="districtchange" value="{{districtid}}" range="{{district_arr}}" range-key="{{'name'}}">
+          <!-- <input placeholder="请输入区" value='{{district_arr[id].name}}'  disabled='true'/> -->
+          <block wx:if="{{districtArr}}">
+            <view class="picker" >{{district}}</view>
+          </block> 
+          <block wx:else>
+            <view class="picker">{{district_arr[districtid].name}}</view>
+          </block> 
+        </picker>
+      </view>
+      <view class="rows">
+        <input type="text" name="detail_address" placeholder="请输入详细地址" value='{{detail_address}}'/>
+      </view>
+
+    </view>
+    <button class="m_xcome" formType="submit">保 存</button>
+  </form>
 </view>
-<button class="m_xcome">保 存</button>

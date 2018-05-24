@@ -2,7 +2,14 @@ page{background:#f4f3f4;}
 
 /* m_xpres */
 .m_xpres{
-  margin-bottom:130rpx;
+  /* margin-bottom:160rpx; */
+}
+.addbox{
+  width: 100%;
+  height: 160rpx;
+  background-color: #f4f3f4;
+  /* position: fixed;
+  bottom: 0; */
 }
 .m_xpres .shop{
   background:#fff;
@@ -45,11 +52,9 @@ page{background:#f4f3f4;}
   bottom:0;
   z-index:5;
   background:rgba(0, 0, 0, .5);
-  display:none;
+  /* display:none; */
 }
-.m_xpopup.on{
-  display:block;
-}
+
 .m_xconfirm{
   width:72%; 
   background:#FAFAFA;
@@ -61,6 +66,8 @@ page{background:#f4f3f4;}
   background:#f9f9f9;
   border:1px solid #e0e0e0;
   overflow:hidden;
+  /* display: none; */
+  z-index: 100;
 }
 .m_xconfirm .title{
   text-align:center;
@@ -69,15 +76,16 @@ page{background:#f4f3f4;}
   line-height:110rpx;
   height:110rpx;
 }
-.m_xconfirm .import{
+.m_xconfirm .importTo{
   width:86%;
-  margin:0 auto 40rpx;
+  
 }
-.m_xconfirm .import input{
+.m_xconfirm  input{
   display:block;
-  width:100%;
+  width:86%;
   height:78rpx;
   line-height:78rpx;
+  margin:0 auto 40rpx;
   border:1px solid #e0e0e0;
   background:#fff;
   font-size:32rpx;
@@ -104,4 +112,7 @@ page{background:#f4f3f4;}
   width:48%;
   border-right:1px solid #e0e0e0;
   color:#6d6d6d;
+}
+.on{
+  display:block;
 }

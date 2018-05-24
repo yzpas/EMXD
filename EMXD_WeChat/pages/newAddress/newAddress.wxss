@@ -31,3 +31,9 @@ page{background:#f4f3f4;}
 .m_xconstr .rows input-placeholder{
   color:#6d6d6d;
 }
+.picker{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 28rpx;
+  color:#6d6d6d;
+}

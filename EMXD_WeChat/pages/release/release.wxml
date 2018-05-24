@@ -1,0 +1,24 @@
+<view class="page public_grey_bg">
+  
+  <view class="m_xtabs">
+    <view class="edit">
+      <textarea placeholder="请填写店铺动态内容..." bindinput='textareaText' value='{{textareaText}}'/>
+    </view>
+  </view>
+  <view class='add_top'>
+     <!-- <view class="title">商品图片</view> -->
+     <view class="pics">
+        <view class="print" wx:for="{{addImageList}}"   wx:key ="{{item.id}}">
+            <image src="/pages/images/del_2.png" class="del" data-index="{{index}}" mode="widthFix" bindtap='delImages'></image> 
+            <image src="{{item.url}}" class="demo" mode="aspectFill" bindload="load"></image> 
+        </view>
+        <view class="upolad" bindtap='addImage' hidden="{{addImage}}">
+            <image src="/pages/images/add.png" class="add" mode="widthFix" ></image> 
+        </view>
+       
+     </view>
+  </view>
+  <view class="m_xbtns">
+    <button class="m_xcome" bindtap="address" disabled='{{disabled}}'>提交</button>
+  </view>
+</view>

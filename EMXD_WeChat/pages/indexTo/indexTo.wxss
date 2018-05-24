@@ -1,0 +1,87 @@
+page{background:#f4f3f4;}
+.getUserInfoClass{
+display:block;
+width:60%;
+/* background:#fc6466; */
+text-align:center;
+height:90rpx;
+line-height:90rpx;
+border:none;
+border-radius:0;
+font-size:28rpx;
+/* color:#fff; */
+/* margin:22rpx auto 0; */
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+}
+.index_header{
+  width: 100%;
+  height: 80rpx;
+  padding: 0 34rpx;
+  box-sizing: border-box;
+  margin-bottom: 12rpx;
+}
+.searchbox{
+  width: 87%;
+  height: 60rpx;
+  margin-top: 15rpx;
+  border: 1px solid #f4f3f4;
+  border-radius: 40rpx;
+  overflow: hidden;
+  float: left;
+}
+.soloIcon{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 10rpx 15rpx 0 20rpx;
+  display: block;
+  float: left;
+}
+.search{
+  width: 80%;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.RichScan{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  float: right;
+  margin-top: 22rpx;
+  opacity:0.5;
+}
+/* m_xstore */
+.m_xstore .title{height:72rpx;line-height:72rpx;vertical-align:middle;padding:0 10rpx;background:#f4f3f4;}
+.m_xstore .title .as{width:38rpx;height:38rpx;background:#fc6466;color:#fff;font-size:24rpx;line-height:38rpx;text-align:center;display:inline-block;}
+.m_xstore .title text{color:#6d6d6d;font-size:24rpx;display:inline-block;padding-left:8rpx;}
+.m_xstore .send .shop{background:#fff;height:110rpx;line-height:110rpx;color:#6d6d6d;font-size:24rpx;padding:0 14rpx;border-bottom: 1px solid #f4f3f4;}
+.m_xstore .send .shop image{display:inline-block;width:60rpx;height:60rpx;vertical-align:middle;margin-right:20rpx;}
+
+/* m_xnums */
+.m_xnums{
+  position:fixed;
+  right:10rpx;
+  top:24%;
+}
+.m_xnums .letter{
+  font-size:21rpx;
+  width:30rpx;
+  text-align:center;
+  color:#6d6d6d;
+  padding-bottom:5rpx;
+}
+.m_xstore_box{
+  overflow: hidden;
+}
+.src{
+  position: relative;
+  height: 100%;
+}
+.page{
+  position: relative;
+  height: 100%;
+}

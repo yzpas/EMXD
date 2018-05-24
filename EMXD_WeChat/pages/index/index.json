@@ -1,3 +1,4 @@
 {
-  "navigationBarTitleText": "鹅毛小店"
+    "navigationBarBackgroundColor": "#b3d4db",
+    "navigationBarTitleText": "授权登录"
 }

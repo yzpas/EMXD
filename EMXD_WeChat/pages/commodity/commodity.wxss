@@ -16,14 +16,13 @@ page{
   height:90rpx;
   line-height:90rpx;
 }
-.upolad,
-.print{
+.upolad,.print{
   float:left;
   width:160rpx;
   height:160rpx;
   border:1px solid #efeeef;
   position:relative;
-  margin:0 10rpx 20rpx 0;
+  margin:0 11rpx 20rpx 0;
 }
 .upolad .add{
   position:absolute;
@@ -37,8 +36,8 @@ page{
   position:absolute;
   width:38rpx;
   height:38rpx;
-  top:-19rpx;
-  right:-19rpx;
+  top:-14rpx;
+  right:-10rpx;
 }
 .print .demo{
   width:100%;
@@ -64,7 +63,9 @@ page{
   float:left;
   background:#fff;
   width:89%;
-  overflow:hidden;
+  /* overflow:hidden; */
+  position: relative;
+  margin-bottom: 20rpx;
 }
 .m_xprice .abs{
   float:left;
@@ -89,26 +90,31 @@ page{
   border-top:1px solid #efeeef;
 }
 .m_xprice .operate{
-  float:left;
-  width:11%;
+  /* float:left; */
+  width:100%;
   text-align:center;
+  clear: both;
 }
-.m_xprice .operate .sele{
+/* .m_xprice .operate .sele{
   display:inline-block;
   width:38rpx;
   margin:80rpx 0;
-}
+} */
 .m_xprice .operate .bus .sele{
-  margin:20rpx 0 0;
+  display:inline-block;
+  width:38rpx;
+  margin-right:20rpx;
+  float: right;
 }
 
 /* m_xtabs */
 .m_xtabs{background:#fff;}
-.m_xtabs .our{border-top:1px solid #f4f3f4;height:96rpx;line-height:104rpx;overflow:hidden;padding:0 32rpx 0 24rpx;color:#6d6d6d;font-size:28rpx;}
+.m_xtabs .our{border-top:1px solid #f4f3f4;height:96rpx;line-height:104rpx;overflow:hidden;padding:0 32rpx 0 24rpx;color:#6d6d6d;font-size:28rpx;border-bottom: 1px solid #efeeef;}
 .m_xtabs .our image{float:right;width:14rpx;height:24rpx;margin-top:40rpx;}
 .m_xtabs .our text{float:right;margin-right:14rpx;}
 .m_xtabs .edit{background:#fff;padding:24rpx;}
-.m_xtabs .edit textarea{display:block;width:100%;line-height:34rpx;font-size:28rpx;}
+.m_xtabs .edit textarea{display:block;width:100%;line-height:40rpx;font-size:28rpx; overflow-y:auto;
+}
 
 .m_xbtns{
   padding:30rpx 5%;
@@ -124,4 +130,26 @@ page{
   border-radius:0;
   height:90rpx;
   line-height:90rpx;
+}
+.nums_lf{
+  float: left;
+}
+.nums_rf{
+  float: left;
+  width: 76% ;
+  height: 94rpx;
+  line-height: 94rpx;
+  color: #fc6466;
+  margin-left: 13rpx;
+}
+.abs_lf{
+  /* overflow: hidden; */
+  float: left;
+}
+.delList{
+  display:inline-block;
+  width:38rpx;
+  position: absolute;
+  right: -60rpx;
+  top: 75rpx;
 }

@@ -1,94 +1,95 @@
 <view class="m_xwraps">
   <swiper class="m_xdiagram" indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
+    <block wx:for="{{productsView.images}}" wx:key="{{productsView.images}}">
       <swiper-item>
-          <image src="{{item}}" class="slide-image" mode="widthFix"></image>
+          <image src="{{item.url}}" class="slide-image" mode="aspectFit"></image>
       </swiper-item>
     </block>
   </swiper>
 
   <view class="m_xprice">
-    <view class="add" bindtap="addCart">加入购物车</view>
-    ￥<text>9</text>.90
+    <view class="add" bindtap="addCarts" wx:if="{{ShareAppMessage}}">加入购物车</view>
+    ￥<text>{{attr[0].price}}</text>
   </view>
-  <view class="m_xstate">泰国white芦荟洗发水,男女通用，一瓶装22克泰国white芦荟洗发水,男女通用，一瓶装22克</view>
+  <view class="m_xstate">{{productsView.title}}</view>
   <view class="m_xdetail">
     <view class="title">商品详情</view>
     <view class="truth">
-        <text>图片+文字混排</text>
-        <image src="/pages/images/create.png" mode="widthFix"></image>
+        <text>{{productsView.contents}}</text>
+        <image src="/pages/images/create.png" mode="widthFix" bindtap='create'></image>
     </view>
   </view>
 </view>
-
-<view class="m_xsettle">
-    <view class="hide">
+<view class='popup' bindtap='popup' wx:if="{{cart}}"></view>
+<!--购物车  -->
+<view class="m_xsettle" wx:if="{{ShareAppMessage}}">
+    <view class="show" wx:if="{{cart}}">
       <view class="all">
-          <view class="dels">
+          <view class="dels" bindtap='del'>
             <image src="/pages/images/del.png" mode="widthFix"></image>清空购物车
           </view>
           <view class="sele">
-            <image src="/pages/images/sele_1.png" mode="widthFix"></image>全选（已选3件）
+            <image src="/pages/images/sele_1.png" mode="widthFix" bindtap='allselect' wx:if="{{!allselect}}"></image>
+             <image src="/pages/images/sele_2.png" mode="widthFix" bindtap='allselectTo' wx:else></image> 全选 (已选{{shopNumberr}}件） 
           </view>
       </view>
-      <view class="shop">
-          <view class="nums">
-            <image src="/pages/images/sele_5.png" mode="widthFix"></image>
-            <text>1</text>
-            <image src="/pages/images/sele_3.png" mode="widthFix"></image>
-          </view>
-          <view class="cont">
-            <image src="/pages/images/sele_1.png" class="sele" mode="widthFix"></image> 
-            <image src="/pages/images/pics_1.jpg" class="demo" mode="widthFix"></image> 
-            <view class="pay">
-                <text>[农鲜生] 罗非鱼约1公斤-宰杀需要备注</text>
-                <text class="red">￥39.99</text>
+      <view class='shop_box'>
+        <view class="shop" wx:for="{{menu_list}}" wx:key="{{item.cat_id}}">
+            <view class="nums">
+              <image src="/pages/images/sele_5.png" mode="widthFix" bindtap='cartRemove' data-id='{{item.attr_info}}' data-isrem="1" catchtap='remCommodityTo'></image>
+              <text >{{item.attr_info.shop_number}}</text>
+              <image src="/pages/images/sele_3.png" mode="widthFix" data-id='{{item.attr_info}}' catchtap="addCommodityTo" data-shopadd="1"></image>
             </view>
-          </view>
+            <view class="cont">
+              <image src="/pages/images/sele_1.png" class="sele" mode="widthFix" data-id="{{item.attr_info}}" bindtap='selectClick' wx:if="{{!item.select}}"></image> 
+              <image src="/pages/images/sele_2.png" class="sele" mode="widthFix" data-id="{{item.attr_info}}" bindtap='selectClicks' wx:else></image>  
+              <image src="{{item.image.url}}" wx:if="{{item.image.url}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.image}}" wx:else class="demo" mode="widthFix"></image> 
+              <view class="pay">
+                  <text class='public_omit_one'>{{item.title}}</text>
+                  <text class="red">￥{{item.attr_info.attr_price}}</text>
+              </view>
+            </view>
+        </view>
       </view>
     </view>
     <view class="settle">
-        <button bindtap="accounts">去结算</button>
-        
+        <view class='btn' bindtap="accounts" wx:if="{{menu_list.length > 0 && selectTos}}">去结算</view>
+        <view class='Nobtn' wx:else>去结算</view>
         <view class="car">
-          <image src="/pages/images/shop_car.png" mode="widthFix"></image>
-          <text>3</text>
+          <image src="/pages/images/shop_car.png" mode="widthFix" bindtap='ClickCart'></image>
+          <text>{{shopNumberr}}</text>
         </view>
-        <view class="pice">￥39.99</view>
+        <view class="pice">￥{{total_fee}}</view>
     </view>
 </view>
 <!--  -->
 <view class="m_xpopups" wx:if="{{select_specification}}" bindtap='popupShow' ></view>
+<!--规格  -->
 <view class="m_xspecs"  wx:if="{{select_specification}}" >
-      <image src="/pages/images/colse.png" class="colse" mode="widthFix" bindtap='popupShow'></image>
-      <swiper class="m_xwhite" indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{imgSmall}}">
-          <swiper-item>
-              <image src="{{item}}" class="slide-image" mode="widthFix"></image>
-          </swiper-item>
-        </block>
-      </swiper>
-      <view class="pays">￥39.99</view>
-      <view class="nums">
-        <image src="/pages/images/sele_6.png" mode="widthFix"></image>
-        <text>1</text>
-        <image src="/pages/images/sele_4.png" mode="widthFix"></image>
+    <image src="/pages/images/colse.png" class="colse" mode="widthFix" bindtap='popupShow'></image>
+    <swiper class="m_xwhite" indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{images}}" wx:key = "{{item.index}}">
+        <swiper-item>
+            <image src="{{item.url}}" class="slide-image" mode="aspectFit"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='titleshop'>{{productsView.title}}</view>
+    <view class="pays">￥{{attr_price}}</view>
+    <view class="nums">
+        <image src="/pages/images/sele_6.png" mode="widthFix" bindtap='subtractCartTo'></image> 
+        <text>{{shop_number}}</text>
+        <image src="/pages/images/sele_4.png" mode="widthFix" bindtap='addCartTo'></image>
       </view>
-      <view class="m_xsize">
-          <text>颜色</text>
-          <view class="sort">
-              <view class="our current">黄色</view>
-              <view class="our">白色</view>
-          </view>
-      </view>
-      <view class="m_xsize soil">
-          <text>尺寸</text>
-          <view class="sort">
-              <view class="our current">M</view>
-              <view class="our">L</view>
-          </view>
-      </view>
-      <button class="btns">确定</button>
-  </view>
+    <view class="m_xsize">
+        <text>规格</text>
+        <view class="sort">
+            <view class="our {{item.attr_id == attr_id?'current':''}}" wx:for="{{attr}}" wx:key="{{item.attr_id}}" data-id="{{item.attr_id}}" data-price="{{item.price}}" bindtap="attr_price">{{item.title}}</view>
+        </view>
+    </view>
+    
+    <button class="btns" bindtap='appshop'>确定</button>
+</view>

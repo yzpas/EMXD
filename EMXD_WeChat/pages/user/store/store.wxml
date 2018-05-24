@@ -13,26 +13,27 @@
     <view class='store_main_top'>
       <view class='store_money'>
         <view class='money_text'>可提现(元)</view>
-        <view class='money_number'>2997</view>
+        <view class='money_number'>{{shopManage.allow_withdraw}}</view>
       </view>
-      <view class='deposit_btn' bindtap='deposit'>提现</view>
+      <view class='deposit_btn' bindtap='deposit' wx:if="{{deposit_btn}}">提现</view>
+      <view class='deposit_btns' bindtap='depositTo' wx:else>提现</view>
     </view>
     <view class='store_main_bottom'>
       <view class='store_main_bottom_li'>
         <view class='li_title'>总收入</view>
-        <view class='li_main'>90.00</view>
+        <view class='li_main'>{{shopManage.total_income}}</view>
       </view>
       <view class='store_main_bottom_li'>
         <view class='li_title'>交易中</view>
-        <view class='li_main'>90.00</view>
+        <view class='li_main'>{{shopManage.in_transaction}}</view>
       </view>
       <view class='store_main_bottom_li'>
         <view class='li_title'>结算中</view>
-        <view class='li_main'>90.00</view>
+        <view class='li_main'>{{shopManage.wait_settle_accounts}}</view>
       </view>
       <view class='store_main_bottom_li'>
         <view class='li_title'>已提现</view>
-        <view class='li_main'>90.00</view>
+        <view class='li_main'>{{shopManage.total_withdraw}}</view>
       </view>
     </view>
   </view>
@@ -48,7 +49,7 @@
       </view>
       <view class='entrance_li' bindtap='management'>
         <image src='/pages/images/y-icon4.png' mode='aspectFit' class='entrance_icon'></image>
-        <view class='entrance_text' >店铺管理</view>
+        <view class='entrance_text' >店铺设置</view>
       </view>
       <view class='entrance_li' bindtap='sellorderMan'>
         <image src='/pages/images/y-icon5.png' mode='aspectFit' class='entrance_icon'></image>
@@ -56,15 +57,23 @@
       </view>
       <view class='entrance_li' bindtap='shopaddClassify'>
         <image src='/pages/images/y-icon6.png' mode='aspectFit' class='entrance_icon'></image>
-        <view class='entrance_text'>分类</view>
+        <view class='entrance_text'>分类管理</view>
       </view>
       <view class='entrance_li' bindtap='winDeposit'>
         <image src='/pages/images/y-icon7.png' mode='aspectFit' class='entrance_icon'></image>
-        <view class='entrance_text'>资金</view>
+        <view class='entrance_text'>资金明细</view>
+      </view>
+      <view class='entrance_li' bindtap='visitor'>
+        <image src='/pages/images/y-icon9.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text'>最近访客</view>
+      </view>
+      <view class='entrance_li' bindtap='shopView'>
+        <image src='/pages/images/y-icon8.png' mode='aspectFit' class='entrance_icon'></image>
+        <view class='entrance_text'>店铺首页</view>
       </view>
   </view>
 
-  <!--tab  -->
+  <!--tab  
   <view class='tab'>
     <view class='tab_li' bindtap='Goindex'>
         <image src='/pages/images/home_2.png' mode='aspectFit' class='tab_li_icon'></image>
@@ -73,10 +82,10 @@
     <view class='tab_li' bindtap='sellorder'>
         <image src='/pages/images/y-icon9-1.png' mode='aspectFit' class='tab_li_icon'></image>
         <view class='tab_li_text'>订单</view>
-    </view>
+    </view> 
     <view class='tab_li' bindtap='Gouser'>
         <image src='/pages/images/y-icon10-1.png' mode='aspectFit' class='tab_li_icon'></image>
         <view class='tab_li_text'>我的</view>
     </view>
-  </view>
+  </view-->
 </view>

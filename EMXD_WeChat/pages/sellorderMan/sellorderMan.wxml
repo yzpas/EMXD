@@ -1,124 +1,162 @@
 <view class='manage_tab'>
     <view class='tabli {{currentTab==0 ? "select" : "tabli"}}' data-id='0' bindtap='tab'>全部</view>
-    <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>待付款</view>
-    <view class='tabli {{currentTab==2 ? "select" : "tabli"}}' data-id='2' bindtap='tab'>待发货</view>
-    <view class='tabli {{currentTab==3 ? "select" : "tabli"}}' data-id='3' bindtap='tab'>已完成</view>
-    <view class='tabli {{currentTab==4 ? "select" : "tabli"}}' data-id='4' bindtap='tab'>已关闭</view>
+    <view class='tabli {{currentTab==10 ? "select" : "tabli"}}' data-id='10' bindtap='tab'>待付款</view>
+    <view class='tabli {{currentTab==20 ? "select" : "tabli"}}' data-id='20' bindtap='tab'>待发货</view>
+    <view class='tabli {{currentTab==50 ? "select" : "tabli"}}' data-id='50' bindtap='tab'>已完成</view>
+    <view class='tabli {{currentTab==90 ? "select" : "tabli"}}' data-id='90' bindtap='tab'>已关闭</view>
 </view>     
 
 <view class="m_xwraps">
   <view class='m_xsend {{currentTab==0 ? "z_show" : "z_hide"}}'>
-      <view class="title">
-          <text>已取消</text>用户昵称1
-      </view>
-      <view class="design">
-          <view class="pays">
-              <text>￥79.98</text>
-              <view class="letter">共2件</view>
+    <scroll-view>
+      <view class='xsend_list' wx:for="{{sellerSellerList0}}" wx:key="{{item.id}}" >
+          <view class="title">
+              <text>{{item.status}}</text>{{item.user_name}}
           </view>
-          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
-          <view class="all" bindtap="details">
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+          <view class="design" data-order_sn="{{item.order_sn}}" bindtap='goInfo'>
+              <view class="pays">
+                  <text>{{item.product_amount}}</text>
+                  <view class="letter">{{item.product_count}}</view>
+              </view>
+              <image src="/pages/images/more.png" class="more" mode="widthFix" wx:if="{{item.product_images.length > 4}}"></image> 
+            <view class="all" bindtap="details">
+              <image src="{{item.product_images[0]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[1]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[2]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[3]}}" class="demo" mode="widthFix"></image> 
+            </view>
+          </view> 
+          <view class="remark total top"><text>{{item.created_at}}</text>{{item.amount}}</view>
+          <view class="remark" wx:if="{{item.note}}">订单备注：{{item.note}}</view>
+          <view class="take" wx:if="{{item.actions}}">
+              <view class="btns" bindtap='godelivery' data-order_sn='{{item.order_sn}}' wx:for="{{item.actions}}" wx:for-item="itemName" wx:key="{{itemName.id}}" >{{itemName.title}}</view>
+              <!-- <view class="btns gray" wx:if="{{item.actions[0].title == '取消订单' || item.actions[1].title == '取消订单'}}">取消订单</view> -->
           </view>
-      </view> 
-      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
-      <view class="remark">订单备注：下午6点半送到，电话111111</view>
-      <view class="take">
-          <view class="btns">去发货</view>
-          <view class="btns gray">取消订单</view>
-      </view>
+        </view>
+      <image src='/pages/images/noshop.png' mode="widthFix" class='noshop'  wx:if="{{sellerSellerList0.length == 0}}"></image>
+    </scroll-view>
   </view>
 
-  <view class='m_xsend {{currentTab==1 ? "z_show" : "z_hide"}}'>
-      <view class="title">
-          <text>已取消</text>用户昵称2
+  <view class='m_xsend {{currentTab==10 ? "z_show" : "z_hide"}}'>
+    <scroll-view>
+       <view class='xsend_list' wx:for="{{sellerSellerList10}}" wx:key="{{item.id}}" >
+        <view class="title">
+            <text>{{item.status}}</text>{{item.user_name}}
+        </view>
+        <view class="design" data-order_sn="{{item.order_sn}}"  bindtap='goInfo'>
+            <view class="pays">
+                <text>{{item.product_amount}}</text>
+                <view class="letter">{{item.product_count}}</view>
+            </view>
+            <image src="/pages/images/more.png" class="more" mode="widthFix" wx:if="{{item.product_images.length > 4}}"></image> 
+            <view class="all" bindtap="details">
+              <image src="{{item.product_images[0]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[1]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[2]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[3]}}" class="demo" mode="widthFix"></image> 
+            </view>
+        </view> 
+        <view class="remark total top"><text>{{item.created_at}}</text>{{item.amount}}</view>
+        <view class="remark" wx:if="{{item.note}}">订单备注：{{item.note}}</view>
+        <view class="take">
+            <view class="btns" bindtap='godelivery' data-order_sn='{{item.order_sn}}' wx:if="{{item.actions[0].title == '去发货' || item.actions[1].title == '去发货'}}">去发货</view>
+              <view class="btns gray" wx:if="{{item.actions[0].title == '取消订单' || item.actions[1].title == '取消订单'}}">取消订单</view>
+        </view>
       </view>
-      <view class="design">
-          <view class="pays">
-              <text>￥79.98</text>
-              <view class="letter">共2件</view>
-          </view>
-          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
-          <view class="all" bindtap="details">
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-          </view>
-      </view> 
-      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
-      <view class="remark">订单备注：下午6点半送到，电话111111</view>
-      <view class="take">
-          <view class="btns">去发货</view>
-          <view class="btns gray">取消订单</view>
-      </view>
+            <image src='/pages/images/noshop.png' mode="widthFix" class='noshop'  wx:if="{{sellerSellerList10.length == 0}}"></image>
+    </scroll-view>
   </view>
 
-  <view class='m_xsend {{currentTab==2 ? "z_show" : "z_hide"}}'>
-      <view class="title">
-          <text>已取消</text>用户昵称3
+  <view class='m_xsend {{currentTab==20 ? "z_show" : "z_hide"}}'>
+    <scroll-view>
+       <view class='xsend_list' wx:for="{{sellerSellerList20}}" wx:key="{{item.id}}" >
+        <view class="title">
+            <text>{{item.status}}</text>{{item.user_name}}
+        </view>
+        <view class="design" data-order_sn="{{item.order_sn}}"  bindtap='goInfo'>
+            <view class="pays">
+                <text>{{item.product_amount}}</text>
+                <view class="letter">{{item.product_count}}</view>
+            </view>
+            <image src="/pages/images/more.png" class="more" mode="widthFix" wx:if="{{item.product_images.length > 4}}"></image> 
+            <view class="all" bindtap="details">
+              <image src="{{item.product_images[0]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[1]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[2]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[3]}}" class="demo" mode="widthFix"></image> 
+            </view>
+        </view> 
+        <view class="remark total top"><text>{{item.created_at}}</text>{{item.amount}}</view>
+        <view class="remark" wx:if="{{item.note}}">订单备注：{{item.note}}</view>
+        <view class="take">
+            <view class="btns" bindtap='godelivery' data-order_sn='{{item.order_sn}}' wx:if="{{item.actions[0].title == '去发货' || item.actions[1].title == '去发货'}}">去发货</view>
+              <view class="btns gray" wx:if="{{item.actions[0].title == '取消订单' || item.actions[1].title == '取消订单'}}">取消订单</view>
+        </view>
       </view>
-      <view class="design">
-          <view class="pays">
-              <text>￥79.98</text>
-              <view class="letter">共2件</view>
-          </view>
-          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
-          <view class="all" bindtap="details">
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-          </view>
-      </view> 
-      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
-      <view class="remark">订单备注：下午6点半送到，电话111111</view>
-      <view class="take">
-          <view class="btns">去发货</view>
-          <view class="btns gray">取消订单</view>
-      </view>
+            <image src='/pages/images/noshop.png' mode="widthFix" class='noshop'  wx:if="{{sellerSellerList20.length == 0}}"></image>
+    </scroll-view>    
   </view>
 
-  <view class='m_xsend {{currentTab==3 ? "z_show" : "z_hide"}}'>
-      <view class="title">
-          <text>已取消</text>用户昵称4
+  <view class='m_xsend {{currentTab==50 ? "z_show" : "z_hide"}}'>
+    <scroll-view>
+       <view class='xsend_list' wx:for="{{sellerSellerList50}}" wx:key="{{item.id}}"  >
+        <view class="title">
+            <text>{{item.status}}</text>{{item.user_name}}
+        </view>
+        <view class="design" data-order_sn="{{item.order_sn}}"  bindtap='goInfo'>
+            <view class="pays">
+                <text>{{item.product_amount}}</text>
+                <view class="letter">{{item.product_count}}</view>
+            </view>
+            <image src="/pages/images/more.png" class="more" mode="widthFix" wx:if="{{item.product_images.length > 4}}"></image> 
+            <view class="all" bindtap="details">
+              <image src="{{item.product_images[0]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[1]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[2]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[3]}}" class="demo" mode="widthFix"></image> 
+            </view>
+        </view> 
+        <view class="remark total top"><text>{{item.created_at}}</text>{{item.amount}}</view>
+        <view class="remark" wx:if="{{item.note}}">订单备注：{{item.note}}</view>
+        <view class="take">
+            <view class="btns" bindtap='godelivery' data-order_sn='{{item.order_sn}}' wx:if="{{item.actions[0].title == '去发货' || item.actions[1].title == '去发货'}}">去发货</view>
+              <view class="btns gray" wx:if="{{item.actions[0].title == '取消订单' || item.actions[1].title == '取消订单'}}">取消订单</view>
+        </view>
       </view>
-      <view class="design">
-          <view class="pays">
-              <text>￥79.98</text>
-              <view class="letter">共2件</view>
-          </view>
-          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
-          <view class="all" bindtap="details">
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-          </view>
-      </view> 
-      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
-      <view class="remark">订单备注：下午6点半送到，电话111111</view>
-      <view class="take">
-          <view class="btns">去发货</view>
-          <view class="btns gray">取消订单</view>
-      </view>
+            <image src='/pages/images/noshop.png' mode="widthFix" class='noshop'  wx:if="{{sellerSellerList50.length == 0}}"></image>
+    </scroll-view>
   </view>
 
-  <view class='m_xsend {{currentTab==4 ? "z_show" : "z_hide"}}'>
-      <view class="title">
-          <text>已取消</text>用户昵称5
+  <view class='m_xsend {{currentTab==90 ? "z_show" : "z_hide"}}'>
+    <scroll-view>
+       <view class='xsend_list' wx:for="{{sellerSellerList90}}" wx:key="{{item.id}}" >
+        <view class="title">
+            <text>{{item.status}}</text>{{item.user_name}}
+        </view>
+        <view class="design"  data-order_sn="{{item.order_sn}}"  bindtap='goInfo'>
+            <view class="pays">
+                <text>{{item.product_amount}}</text>
+                <view class="letter">{{item.product_count}}</view>
+            </view>
+            <image src="/pages/images/more.png" class="more" mode="widthFix" wx:if="{{item.product_images.length > 4}}"></image> 
+            <view class="all" bindtap="details">
+              <image src="{{item.product_images[0]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[1]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[2]}}" class="demo" mode="widthFix"></image> 
+              <image src="{{item.product_images[3]}}" class="demo" mode="widthFix"></image> 
+            </view>
+        </view> 
+        <view class="remark total top"><text>{{item.created_at}}</text>{{item.amount}}</view>
+        <view class="remark" wx:if="{{item.note}}">订单备注：{{item.note}}</view>
+        <view class="take">
+            <view class="btns" bindtap='godelivery' data-order_sn='{{item.order_sn}}'  wx:if="{{item.actions[0].title == '去发货' || item.actions[1].title == '去发货'}}">去发货</view>
+              <view class="btns gray" wx:if="{{item.actions[0].title == '取消订单' || item.actions[1].title == '取消订单'}}">取消订单</view>
+        </view>
       </view>
-      <view class="design">
-          <view class="pays">
-              <text>￥79.98</text>
-              <view class="letter">共2件</view>
-          </view>
-          <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
-          <view class="all" bindtap="details">
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-          </view>
-      </view> 
-      <view class="remark total top"><text>下单时间：03-12  18:00</text>￥79.98</view>
-      <view class="remark">订单备注：下午6点半送到，电话111111</view>
-      <view class="take">
-          <view class="btns">去发货</view>
-          <view class="btns gray">取消订单</view>
-      </view>
+      <image src='/pages/images/noshop.png' mode="widthFix" class='noshop'  wx:if="{{sellerSellerList90.length == 0}}"></image>
+    </scroll-view>
+    
   </view>
+  
 </view>
+<!-- <view class='loader_text'>没有更多了哦~</view> -->

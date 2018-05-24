@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<view class='page'>
+  <!-- <scroll-view scroll-into-view="{{toView}}" style="height:{{getSystemInfo.windowHeight}}px;" bindscroll="scroll"  scroll-y="true" scroll-with-animation="true" class="src"> -->
+   <!--头部  -->
+  <view class='index_header'>
+      <view class='searchbox'>
+        <image src='/pages/images/solo.png' mode="widthFix" class='soloIcon'></image>
+        <input class='search' placeholder='请输入店铺名称' bindinput='bindKeyInput' confirm-type="search" bindconfirm='search'></input>
+      </view>
+      <image class='RichScan' src='/pages/images/sao.png' mode="widthFix" bindtap='RichScan'></image>
+  </view>
+    <view class="m_xstore" wx:if="{{Search.length > 0}}">
+        <view class="title">
+            <view class="as">店</view>
+            <text>搜索到的店</text>
+        </view>
+        <!--   -->
+        <view class="send" wx:for="{{Search}}" wx:key = "{{item.index}}">
+            <view class="shop" data-name="{{item.title}}" bindtap="shopST" data-id='{{item.shop_id}}' wx:key="{{item.shop_id}}">
+              <image src="{{item.image}}" mode='aspectFit'></image>{{item.title}}
+            </view>
+            
+        </view>
+    </view>
+    <view wx:else>
+      <view class="m_xstore">
+          <view class="title">
+              <view class="as">店</view>
+              <text>最近的使用店铺</text>
+          </view>
+          <!--   -->
+          <view class="send">
+              <view class="shop" data-name="{{item.title}}" bindtap="shopST" data-id='{{item.shop_id}}' wx:key="{{item.shop_id}}" wx:for="{{recently_shop_list}}">
+                <image src="{{item.image}}" mode='aspectFit'></image>{{item.title}}
+              </view>
+              
+          </view>
+      </view>
+      <view class="m_xstore" wx:key="{{item.index}}"  id="{{item.name}}"  wx:for-item="item" wx:for="{{follow_shop_list}}">
+            <view class="title">
+                <view class="as">{{item.name}}</view>
+                <text>店铺</text>
+            </view>
+            <view class='m_xstore_box'>
+              <view class="send">
+                  <view class="shop" bindtap="shopST" data-name="{{items.title}}"  data-id='{{items.shop_id}}' wx:key="{{items.shop_id}}" wx:for="{{item.merchant}}" wx:for-item="items">
+                    <image src="{{items.image}}" mode='aspectFit'></image>{{items.title}}
+                  </view>
+              </view>
+          </view>
+      </view>
+    </view>
+  <!-- </scroll-view> -->
+
+<!-- <view class="m_xnums">
+    <view class="letter" bindtap='anchor' data-anchor='A'>A</view>
+    <view class="letter" bindtap='anchor' data-anchor='B'>B</view>
+    <view class="letter" bindtap='anchor' data-anchor='C'>C</view>
+    <view class="letter" bindtap='anchor' data-anchor='D'>D</view>
+    <view class="letter" bindtap='anchor' data-anchor='E'>E</view>
+    <view class="letter" bindtap='anchor' data-anchor='F'>F</view>
+    <view class="letter" bindtap='anchor' data-anchor='G'>G</view>
+    <view class="letter" bindtap='anchor' data-anchor='H'>H</view>
+    <view class="letter" bindtap='anchor' data-anchor='I'>I</view>
+    <view class="letter" bindtap='anchor' data-anchor='J'>J</view>
+    <view class="letter" bindtap='anchor' data-anchor='K'>K</view>
+    <view class="letter" bindtap='anchor' data-anchor='L'>L</view>
+    <view class="letter" bindtap='anchor' data-anchor='M'>M</view>
+    <view class="letter" bindtap='anchor' data-anchor='N'>N</view>
+    <view class="letter" bindtap='anchor' data-anchor='O'>O</view>
+    <view class="letter" bindtap='anchor' data-anchor='P'>P</view>
+    <view class="letter" bindtap='anchor' data-anchor='Q'>Q</view>
+    <view class="letter" bindtap='anchor' data-anchor='R'>R</view>
+    <view class="letter" bindtap='anchor' data-anchor='S'>S</view>
+    <view class="letter" bindtap='anchor' data-anchor='T'>T</view>
+    <view class="letter" bindtap='anchor' data-anchor='W'>W</view>
+    <view class="letter" bindtap='anchor' data-anchor='X'>X</view>
+    <view class="letter" bindtap='anchor' data-anchor='Z'>Z</view>
+</view> -->
+</view>

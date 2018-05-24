@@ -45,15 +45,19 @@
   text-align: left;
   margin-left: 298rpx;
   float: left;
+  margin-right: 18rpx;
+  padding-right: 6rpx;
 }
 .money_text{
   font-size: 24rpx;
   color: #6d6d6d;
   margin-left: 4rpx;
+  text-align: center;
 }
 .money_number{
   font-size: 48rpx;
   color: #6d6d6d;
+  text-align: center;
 }
 .deposit_btn{
   width: 80rpx;
@@ -63,6 +67,18 @@
   background-color: #fc6466;
   font-size: 22rpx;
   color: #fff;
+  border-radius: 0;
+  float: left;
+  margin-top: 98rpx;
+}
+.deposit_btns{
+  width: 80rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  background-color: #e6e6e6;
+  font-size: 22rpx;
+  color: #999;
   border-radius: 0;
   float: left;
   margin-top: 98rpx;
@@ -118,7 +134,7 @@
   background-color: #ffffff;
 }
 .tab_li{
-  width: 33.33%;
+  width: 50%;
   float: left;
 
 }

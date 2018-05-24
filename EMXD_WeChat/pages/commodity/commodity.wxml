@@ -2,44 +2,61 @@
   <view class='add_top'>
      <view class="title">商品图片</view>
      <view class="pics">
-        <view class="upolad">
-            <image src="/pages/images/add.png" class="add" mode="widthFix"></image> 
+        <view class="print" wx:for="{{addImageList}}"   wx:key ="{{item.id}}">
+            <image src="/pages/images/del_2.png" class="del" data-index="{{index}}" mode="widthFix" bindtap='delImages'></image> 
+            <image src="{{item.url}}" class="demo" mode="aspectFill" bindload="load"></image> 
         </view>
-        <view class="print">
-            <image src="/pages/images/del_2.png" class="del" mode="widthFix"></image> 
-            <image src="/pages/images/head.jpg" class="demo" mode="widthFix"></image> 
+        <view class="upolad" bindtap='addImage' hidden="{{addImage}}">
+            <image src="/pages/images/add.png" class="add" mode="widthFix" ></image> 
         </view>
+       
      </view>
   </view>
   <view class="import">
-      <input type="text" placeholder="输入商品标题" />
+      <input type="text" placeholder="请输入商品标题" bindinput='InputTexts' value='{{InputTextTo}}' />
+      <!-- value='{{InputText}}' -->
   </view>
   <view class="m_xprice">
-    <view class="project">
-      <view class="abs">
-        <view class="nums">价格<text>9.09</text></view>
+    <block wx:for="{{specificationLists}}" wx:key="index">
+      <view class="project" >
+        <view class='abs_lf'>
+          <view class="abs">
+            <view class="nums">
+              <view class='nums_lf'>价格</view>
+              <input type='digit' placeholder='请输入价格' bindinput="InputPrice" maxlength='9' data-id="{{item.judge_fields}}" value='{{item.price}}'  class='nums_rf' type='digit'></input>
+            </view>
+          </view>
+          <view class="abs">
+            <view class="nums">
+              <view class='nums_lf'>库存</view>
+              <input type='number' placeholder='请输入库存' bindinput="InputStock" data-id="{{item.judge_fields}}"  value='{{item.stock}}'  class='nums_rf' type='digit'></input>
+            </view>
+            
+          </view>
+          <view class="abs top">
+            <view class="nums">
+              <view class='nums_lf'>规格</view>
+              <input type='text' placeholder='请输入规格' bindinput="InputTitle" data-id="{{item.judge_fields}}"  value='{{item.title}}'  class='nums_rf' type='text'></input>
+            </view>
+          </view>
+        </view>
+        <image src="/pages/images/sele_6.png" data-id="{{item.judge_fields}}" data-attrid="{{item.attr_id}}" class="delList" mode="widthFix" bindtap='delList'></image>
       </view>
-      <view class="abs">
-        <view class="nums">库存<text>100000</text></view>
-      </view>
-      <view class="abs top">
-        <view class="nums">规格<text>XL</text></view>
-      </view>
-    </view>
-    <view class="operate">
-        <image src="/pages/images/sele_6.png" class="sele" mode="widthFix"></image>
+    </block>
+    <view class="operate" hidden='{{addShop}}'>
+        
         <view class="bus">
-          <image src="/pages/images/sele_4.png" class="sele" mode="widthFix"></image> 
+          <image src="/pages/images/sele_4.png" class="sele" mode="widthFix" bindtap='addList'></image> 
         </view>
     </view>
   </view>
   <view class="m_xtabs">
-    <view class="our" bindtap='store'>
+    <view class="our" bindtap='store' bindtap='goClassify'>
         <image src="/pages/images/trian.png"></image>
-        <text>烟酒</text>分类
+        <text>{{shopCategory.title}}</text>分类
     </view>
     <view class="edit">
-      <textarea placeholder="商品图文描述编辑" />
+      <textarea placeholder="商品描述" bindinput='textareaText' maxlength='1000' value='{{textareaText}}'/>
     </view>
   </view>
   <view class="m_xbtns">

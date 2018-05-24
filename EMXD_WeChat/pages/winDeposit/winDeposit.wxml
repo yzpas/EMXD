@@ -1,10 +1,10 @@
 
 <view class="m_xextract">
-    <view class="title">提现金额（2小时内到账微信领钱）</view>
+    <view class="title">提现金额（2小时内到账微信零钱）</view>
     <view class="pays">
       <text>￥</text>
-      <input type="text" class="text" placeholder="2997.00" />
+      <input type="text" class="text" bindinput='bindReplaceInput' placeholder-style='font-size:18px' placeholder="请输入提现金额" value='{{money}}' disabled='true' />
     </view>
-    <view class="own">余额￥3000.00，<text>全部提现</text></view>
-    <button class="btns">确  定</button>
+    <view class="own">余额￥{{money}} 元</view>
+    <button class="btns" bindtap='deposit'>确  定</button>
 </view>

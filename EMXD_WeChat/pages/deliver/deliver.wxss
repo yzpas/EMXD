@@ -2,7 +2,13 @@ page{background:#f4f3f4;}
 
 /* m_xshipment */
 .m_xshipment{background:#fff;}
-.m_xshipment .rows{border-bottom:2rpx solid #f4f3f4;padding:0 24rpx;}
+.m_xshipment .rows{border-bottom:2rpx solid #f4f3f4;padding:0 24rpx; height: 88rpx;}
+.picker{
+ font-size:28rpx;
+ color:#6d6d6d;
+ height:88rpx;
+ line-height:88rpx
+}
 .m_xshipment .rows input{font-size:28rpx;color:#6d6d6d;height:88rpx;line-height:88rpx}
 .m_xshipment .rows input-placeholder{color:#6d6d6d;}
 .m_xshipment .take{overflow:hidden;padding:30rpx 22rpx 4rpx;}

@@ -1,49 +1,60 @@
 <view class='manage_tab'>
-    <view class='tabli {{currentTab==0 ? "select" : "tabli"}}' data-id='0' bindtap='tab'>全部</view>
-    <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>收入</view>
-    <view class='tabli {{currentTab==2 ? "select" : "tabli"}}' data-id='2' bindtap='tab'>支出</view>
-    <view class='tabli {{currentTab==3 ? "select" : "tabli"}}' data-id='3' bindtap='tab'>冻结/解冻</view>
+    <view class='tabli {{currentTab==2 ? "select" : "tabli"}}' data-id='2' bindtap='tab'>收入</view>
+    <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>支出</view>
+    <view class='tabli {{currentTab==10 ? "select" : "tabli"}}' data-id='10' bindtap='tab'>结算中</view>
+    <view class='tabli {{currentTab==20 ? "select" : "tabli"}}' data-id='20' bindtap='tab'>已结算</view>
 </view>     
 
-<view class="m_xwraps">
-  <view class='m_xreceive {{currentTab==0 ? "z_show" : "z_hide"}}'>
-      <view class="title">2018-03-05</view>
-      <view class="details">
-          <text class="pays">+1.00</text>
-          <view class="mains">
-            <text>支付-桌子</text>
-            <text>2018-03-05</text>
-          </view>
-      </view>
-  </view>
-  <view class='m_xreceive {{currentTab==1 ? "z_show" : "z_hide"}}'>
-      <view class="title">2017-03-05</view>
-      <view class="details">
-          <text class="pays">+5.00</text>
-          <view class="mains">
-            <text>支付-桌子</text>
-            <text>2018-03-05</text>
-          </view>
-      </view>
-  </view>
-  <view class='m_xreceive {{currentTab==2 ? "z_show" : "z_hide"}}'>
-      <view class="title">2017-03-05</view>
-      <view class="details">
-          <text class="pays">+20.00</text>
-          <view class="mains">
-            <text>支付-毛巾</text>
-            <text>2018-03-05</text>
-          </view>
-      </view>
-  </view>
-  <view class='m_xreceive {{currentTab==3 ? "z_show" : "z_hide"}}'>
-      <view class="title">2017-03-05</view>
-      <view class="details">
-          <text class="pays">+26.00</text>
-          <view class="mains">
-            <text>支付-板凳</text>
-            <text>2018-03-05</text>
-          </view>
-      </view>
-  </view>
+<view class="m_xwraps public_grey_bg">
+  <scroll-view  bindscrolltolower="loadMore" bindscrolltoupper="refesh" >
+    <view class='m_xreceive  {{currentTab==2 ? "z_show" : "z_hide"}}'>
+        <view class="details"  wx:for="{{accountList2}}" wx:key="{{item.title}}">
+            <text class="pays">{{item.money}}</text>
+            <view class="mains">
+              <view class='titles '>{{item.title}}</view>
+              <text class='date_time '>{{item.date_time}}</text>
+            </view>
+        </view>
+        <image src='/pages/images/noshop.png' mode="widthFix" class='noshop' wx:if="{{accountList2.length === 0}}"></image>
+    </view>
+    
+  </scroll-view>
+   <scroll-view  bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view class='m_xreceive {{currentTab==1 ? "z_show" : "z_hide"}}'>
+        <view class="details"  wx:for="{{accountList1}}" wx:key="{{item.title}}">
+            <text class="pays">{{item.money}}</text>
+            <view class="mains">
+              <view class='titles '>{{item.title}}</view>
+              <text class='date_time '>{{item.date_time}}</text>
+            </view>
+        </view>
+         <image src='/pages/images/noshop.png' mode="widthFix" class='noshop' wx:if="{{accountList1.length === 0}}"></image>
+    </view>
+   
+  </scroll-view>
+  <scroll-view  bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view class='m_xreceive {{currentTab==10 ? "z_show" : "z_hide"}}'>
+        <view class="details"  wx:for="{{accountList10}}" wx:key="{{item.title}}">
+            <text class="pays">{{item.money}}</text>
+            <view class="mains">
+              <view class='titles '>{{item.title}}</view>
+              <text class='date_time '>{{item.date_time}}</text>
+            </view>
+        </view>
+      <image src='/pages/images/noshop.png' mode="widthFix" class='noshop' wx:if="{{accountList10.length === 0}}"></image>
+    </view>
+  </scroll-view>
+  <scroll-view  bindscrolltolower="loadMore" bindscrolltoupper="refesh">
+    <view class='m_xreceive {{currentTab==20 ? "z_show" : "z_hide"}}'>
+        <view class="details"  wx:for="{{accountList20}}" wx:key="{{item.title}}">
+            <text class="pays">{{item.money}}</text>
+            <view class="mains">
+              <view class='titles '>{{item.title}}</view>
+              <text class='date_time '>{{item.date_time}}</text>
+            </view>
+        </view>
+        <image src='/pages/images/noshop.png' mode="widthFix" class='noshop' wx:if="{{accountList20.length === 0}}"></image>
+    </view>
+  </scroll-view>
+  <!-- <view class='loader_text' wx:if="{{Noloader}}">没有更多了哦~</view> -->
 </view>

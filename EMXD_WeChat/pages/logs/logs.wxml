@@ -1,28 +1,32 @@
 <!--logs.wxml-->
 <view class="m_xtitle">
-    <image src="../images/head.jpg"></image>
+    <image src="{{logs.user_photo }}"></image>
     <view class="mians">
-        <text>昵称</text>
-        <text>186****1111</text>
+        <text>{{logs.name }}</text>
+        <text>{{logs.mobile }}</text>
     </view>
 </view>
-<view class="m_xtabs">
-    <view class="our" bindtap='store'>
-        <image src="../images/trian.png"></image>我的店铺
+<view class="m_xtabs" wx:if="{{isToken}}">
+    <view class="our" bindtap='store' data-shop_id='{{logs.shop_id}}' wx:if="{{logs.is_display_shop_manage == 1}}">
+        <image src="../images/trian.png"></image>店铺管理
     </view>
-    <view class="our" bindtap='setShop'>
+    <view class="our" bindtap='setShop' wx:if="{{logs.is_display_shop_apply == 1}}">
         <image src="../images/trian.png"></image>我要开店
     </view>
-    <view class="our" bindtap='order'>
-        <image src="../images/trian.png"></image>我买到的
+    <view class="our" data-name="{{logs.shop_title}}" bindtap="shopST" data-id='{{logs.shop_id}}'  wx:if="{{logs.is_display_shop_home == 1}}">
+        <image src="../images/trian.png"></image>店铺首页
     </view>
-    <view class="our" bindtap='sellorderMan'>
+    <!--view class="our" bindtap='order'>
+        
+        <image src="../images/trian.png"></image>我买到的
+    </view-->
+    <view class="our" bindtap='sellorderMan' wx:if="{{logs.is_display_my_sale == 1 }}">
         <image src="../images/trian.png"></image>我卖出的
     </view>
     <view class="our" bindtap='location'> 
         <image src="../images/trian.png"></image>收货地址
     </view>
     <view class="our" bindtap='opinion'>
-       <image src="../images/tel.png" class="tel"></image>意见反馈
+       <image src="../images/tel.png" class="tel"></image>联系客服
     </view>
 </view>

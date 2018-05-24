@@ -1,113 +1,158 @@
-<view class="page public_grey_bg">
+
   <!--头部  -->
    <view class='manage_tab'>
-      <view class='tabli {{currentTab==0 ? "select" : "tabli"}}' data-id='0' bindtap='tab'>出售中(100)</view>
-      <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>已下架(10)</view>
-     
-   </view>
+      <view class='tabli {{currentTab==0 ? "select" : "tabli"}}' data-id='0' bindtap='tab'>出售中({{on_sale_count}})         </view>
+      <view class='tabli {{currentTab==1 ? "select" : "tabli"}}' data-id='1' bindtap='tab'>已下架({{not_sale_count}})       </view>
+   </view> 
    <!-- 内容 -->
-   <view class='manage_main'>
-      <view class='tab_main {{currentTab==0 ? "displayB" : "tab_main"}}'>
-          <view class='tab_list'>
-              <view class='list_top'>
-                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
-                  <view class='list_text'>
-                    <view class='text_title'>[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
-                    <view class='text_money'>售价：<text>￥39.99</text></view>
+    <view class='manage_main'>
+       
+        <view class='tab_main {{currentTab==0 ? "displayB" : "tab_main"}}'>
+           <scroll-view class="dynamic" scroll-y bindscrolltolower="bindDownLoad">
+              <view class='tab_list' wx:for="{{product_list}}" wx:key="{{item.product_id}}">
+                  <view class='list_top'>
+                      <image src='{{item.images[0].url}}' mode='aspectFit' class='list_icon'></image>
+                      <view class='list_text'>
+                        <view class='text_title'>{{item.title}}</view>
+                        <view class='text_money'>售价：<text>￥{{item.price}}</text></view>
+                      </view>
+                      <view hidden='{{isHidden}}'>
+                        <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1' data-id="{{item.product_id}}" bindtap='selectTo'   wx:if="{{item.select}}"></image> 
+                        <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1' data-id="{{item.product_id}}" bindtap='select' wx:else></image>
+                      </view>
                   </view>
-                  <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image>
-                  <!-- <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> -->
+                  <view class='list_bom'>
+                    <view class='putaway_box'>
+                      <view class="putaway colerSelect}}"  data-id="{{item.product_id}}" bindtap='soldOut'>下架</view>
+                      <!-- <view class="putaway {{item.shopUp == false ? 'colerSelect':''}}"  data-id="{{item.product_id}}" bindtap='soldUp'>上架</view> -->
+                    </view>
+                    <view class='compile' data-item="{{item}}" bindtap='compile'>编  辑</view>
+                  </view>
+              </view>
+             </scroll-view>
+              <view class='noShopContents' wx:if="{{on_sale_count == 0}}">
+                <image  src='/pages/images/noshop.png' mode="widthFix" class='noshop' ></image>
+                <view class='noText'>暂无商品</view>
+              </view>
+        
+        </view>
+    
+      
+        <view class='tab_main {{currentTab==1 ? "displayB" : "tab_main"}}'>
+          <scroll-view class="dynamic" scroll-y bindscrolltolower="bindDownLoad">
+            <view class='tab_list' wx:for="{{product_listTo}}" wx:key="{{item.category_id}}">
+              <view class='list_top'>
+                  <image src='{{item.images[0].url}}' mode='aspectFit' class='list_icon'></image>
+                  <view class='list_text'>
+                    <view class='text_title'>{{item.title}}</view>
+                    <view class='text_money'>售价：<text>￥{{item.price}}</text></view>
+                  </view>
+                  <view hidden='{{isHidden}}'>
+                    <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1' data-id="{{item.product_id}}" bindtap='selectTo'   wx:if="{{item.select}}"></image> 
+                    <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1' data-id="{{item.product_id}}" bindtap='select' wx:else></image>
+                  </view>
               </view>
               <view class='list_bom'>
-                <view class='putaway_box'>
-                  <view class='putaway'>下架</view>
-                  <view class='putaway colerSelect'>上架</view>
-                </view>
-                <view class='compile'>编  辑</view>
+                  <view class='putaway_box'>
+                      <!-- <view class="putaway {{item.shopUp == false ? 'colerSelect':''}}"  data-id="{{item.product_id}}" bindtap='soldOutTo'>下架</view> -->
+                      <view class="putaway colerSelect"  data-id="{{item.product_id}}" bindtap='soldUpTo'>上架</view>
+                    </view>
+                
+                <view class='compile' data-item="{{item}}" bindtap='compile'>编  辑</view>
               </view>
-          </view>
-          <view class='tab_list'>
-              <view class='list_top'>
-                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
-                  <view class='list_text'>
-                    <view class='text_title'>1[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
-                    <view class='text_money'>售价：<text>￥39.99</text></view>
-                  </view>
-                  <!-- <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image> -->
-                   <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> 
-              </view>
-              <view class='list_bom'>
-                <view class='putaway_box'>
-                  <view class='putaway'>下架</view>
-                  <view class='putaway colerSelect'>上架</view>
-                </view>
-                <view class='compile'>编  辑</view>
-              </view>
-          </view>
-      </view>
-
-      <view class='tab_main {{currentTab==1 ? "displayB" : "tab_main"}}'>
-          <view class='tab_list'>
-              <view class='list_top'>
-                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
-                  <view class='list_text'>
-                    <view class='text_title'>2[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
-                    <view class='text_money'>售价：<text>￥39.99</text></view>
-                  </view>
-                  <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image>
-                  <!-- <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> -->
-              </view>
-              <view class='list_bom'>
-                <view class='putaway_box'>
-                  <view class='putaway'>下架</view>
-                  <view class='putaway colerSelect'>上架</view>
-                </view>
-                <view class='compile'>编  辑</view>
-              </view>
-          </view>
-          <view class='tab_list'>
-              <view class='list_top'>
-                  <image src='/pages/images/pics_2.jpg' mode='aspectFit' class='list_icon'></image>
-                  <view class='list_text'>
-                    <view class='text_title'>1[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
-                    <view class='text_money'>售价：<text>￥39.99</text></view>
-                  </view>
-                  <!-- <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon1'></image> -->
-                   <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon1'></image> 
-              </view>
-              <view class='list_bom'>
-                <view class='putaway_box'>
-                  <view class='putaway'>下架</view>
-                  <view class='putaway colerSelect'>上架</view>
-                </view>
-                <view class='compile'>编  辑</view>
-              </view>
-          </view>
-      </view>
-
+            </view>
+          </scroll-view>
+          <view class='noShopContents' wx:if="{{not_sale_count == 0}}">
+          <image  src='/pages/images/noshop.png' mode="widthFix" class='noshop' ></image>
+          <view class='noText'>暂无商品</view>
+        </view>
+        </view>
      
-   </view>
+   </view> 
 
    <!--底部  -->
-   <view class='manage_bom'>
-      <view class='manage_bom_one'>
-          <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon2'></image>
+     <view class='manage_bom'>
+      <view class='manage_bom_one' hidden='{{isHidden}}'>
+          <image src='/pages/images/sele_2.png' mode='aspectFit' class='list_icon2' bindtap='checkAllTo'  wx:if="{{selectAll}}"></image> 
+          <image src='/pages/images/sele_1.png' mode='aspectFit' class='list_icon2' bindtap='checkAll' wx:else></image>
           <text class='one_text'>全选</text>
           <view class='one_rf rf'>
             
             <view class='one_list'>
-                <image src='/pages/images/y-icon13.png' mode='aspectFit' class='list_icon3'></image>
+                <image src='/pages/images/y-icon13.png' mode='aspectFit' class='list_icon3' bindtap='batchBelow'></image>
                 <view class='one_list_text'>下架</view>
             </view>
             <view class='one_list'>
-                <image src='/pages/images/y-icon12.png' mode='aspectFit' class='list_icon3'></image>
-                <view class='one_list_text'>置顶</view>
+                <image src='/pages/images/y-icon12.png' mode='aspectFit' class='list_icon3' bindtap='batchUp'></image>
+                <view class='one_list_text'>上架</view>
             </view>
           </view>
       </view>
       <view class='manage_bom_to'>
-          <view class='manage_bom_to_btn lf'>添加商品</view>
-          <view class='manage_bom_to_btn rf'>批量管理</view>
+          <view class='manage_bom_to_btn lf' bindtap='GoaddShop'>添加商品</view>
+          <view class='manage_bom_to_btn rf' bindtap='management'>批量管理</view>
       </view>
-   </view>
+   </view>  
+ 
+<!-- <view class="loader-inner ball-beat" wx:if="{{loader}}" >
+  <view class='loader'></view>
+  <view class='loader'></view> 
+  <view class='loader'></view> 
 </view>
+<view class='loader_text' wx:if="{{Noloader}}">没有更多了哦~</view>  -->
+<!-- <scroll-view bindscrolltolower="loadMore"  style='height:800px' class='list_box'>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view> <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+
+    <view>1</view>
+    <view>1</view>
+    <view>1</view> <view>1</view>
+    <view>1</view>
+
+
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+    <view>1</view>
+
+</scroll-view> -->

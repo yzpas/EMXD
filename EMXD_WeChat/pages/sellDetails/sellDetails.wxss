@@ -44,6 +44,7 @@ page{background:#f4f3f4;}
 }
 .m_xnews .nub{
   line-height:34rpx;
+  width:86%;
 }
 .m_xnews .tels{
   position:relative;
@@ -62,14 +63,14 @@ page{background:#f4f3f4;}
   bottom:0;
   left:0;
   width:100%;
-  background:#fff;
+  background:#fc595b;
   height:80rpx;
   line-height:80rpx;
   font-size:24rpx;
-  color:#6d6d6d;
+  color:#fff;
   border-radius:0;
   text-align:center;
 }
 .m_xpadd{
-  margin-bottom:100rpx;
+  padding-bottom:100rpx;
 }

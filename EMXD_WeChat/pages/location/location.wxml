@@ -1,7 +1,25 @@
-<view class="m_xtitle">默认收货地址</view>
-<view class="m_xsite" bindtap="address">
-    <image src="../images/edit.png"></image> 
-    <view class="pet"><text>昵称</text>186****1111</view>
-    <view class="pet">北京市朝阳区望京1号</view>
+<view class='locationbox'>
+  <!-- <view class="m_xtitle">默认收货地址</view>
+  
+<view wx:if="{{default_address}}">
+  <view class="m_xsite" bindtap="address" wx:for="{{default_address}}" wx:key="{{item.id}}" data-address = "{{item}}" >
+      <image src="../images/edit.png"></image> 
+      <view class="pet"><text>{{item.user_name}}</text>{{item.telephone}}</view>
+      <view class="pet">{{item.str_address}}</view>
+  </view>
+</view> -->
+
+  <!-- <view class="m_xtitle">收货地址</view> -->
+  <view wx:if="{{address}}" class='address'>
+  <view class="m_xsite" wx:for="{{address}}" wx:key="{{item.id}}" bindtap='addressTo' data-address = "{{item}}" >
+      <image src="/pages/images/edit.png"  data-address = "{{item}}"  catchtap="address" class='update' style='padding-left: 40rpx;'></image> 
+      <image src="/pages/images/del_1.png" class="dels" mode="widthFix" data-id="{{item.id}}" catchtap='clickDeleteClassify' />
+      <view class="pet"><text>{{item.user_name}}</text>{{item.telephone}}</view>
+      <view class="pet">{{item.detail_address}}</view>
+  </view>
 </view>
-<button class="m_xcome" bindtap="address">新建收货地址</button>
+<view class='hint' wx:else>暂无收货地址</view>
+</view>
+<view class='btnbox'>
+  <button class="m_xcome" bindtap="address">新建收货地址</button>
+</view>

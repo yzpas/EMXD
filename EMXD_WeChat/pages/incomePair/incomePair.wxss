@@ -1,10 +1,13 @@
 page{background:#f4f3f4;}
-
+.public_grey_bg{
+  top: 66rpx;
+  height: 100%;
+}
 .manage_tab{
   width: 100%;
   height: 67rpx;
   background-color: #ffffff;
-  margin-top:15rpx;
+  /* margin-top:15rpx; */
 }
 .manage_tab .tabli{
   width: 25%;
@@ -21,10 +24,13 @@ page{background:#f4f3f4;}
 
 /* m_xreceive */
 .m_xreceive{
-  background:#fff;
+  margin-top: 1px;
+  min-height: 800rpx;
+  position: relative;
 }
 .m_xreceive.z_show{
   display:block;
+
 }
 .m_xreceive.z_hide{
   display:none;
@@ -42,6 +48,8 @@ page{background:#f4f3f4;}
   background:#fff;
   padding:20rpx 24rpx;
   overflow:hidden;
+  border-bottom: 1px solid #f4f3f4;
+  margin-bottom: 20rpx;
 }
 .m_xreceive .details .pays{
   float:right;
@@ -49,9 +57,44 @@ page{background:#f4f3f4;}
   font-size:36rpx;
   line-height:60rpx;
 }
-.m_xreceive .mains text{
+/* .m_xreceive .mains text{
   display:block;
   color:#6d6d6d;
   font-size:24rpx;
   line-height:33rpx;
+} */
+.mains{
+  width: 540rpx;
+  float: left;
+}
+.m_xreceive .mains .titles{
+  display:block;
+  color:#6d6d6d;
+  font-size:24rpx;
+  line-height:33rpx;
+  margin-bottom: 10rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.m_xreceive .mains .date_time{
+  display:block;
+  color:#6d6d6d;
+  font-size:24rpx;
+  line-height:33rpx;
+  margin-bottom: 10rpx;
+  width: 100%;
+  
+}
+.noshop{
+  width: 250rpx;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
 }

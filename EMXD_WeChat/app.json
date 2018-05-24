@@ -1,7 +1,10 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/indexTo/indexTo",
+    "pages/release/release",
     "pages/deliver/deliver",
+    "pages/user/store/commodityManage/commodityManage",
     "pages/logs/logs",
     "pages/setShop/setShop",
     "pages/Individual/Individual",
@@ -12,32 +15,38 @@
     "pages/nodata/nodata",
     "pages/orderDetails/orderDetails",
     "pages/productDetails/productDetails",
-    "pages/shopaddClassify/shopaddClassify",
     "pages/sellDetails/sellDetails",
     "pages/winDeposit/winDeposit",
     "pages/sellorder/sellorder",
-    "pages/sellorderMan/sellorderMan",
     "pages/incomePair/incomePair",
+    "pages/shopaddClassify/shopaddClassify",
     "pages/shopClassify/shopClassify",
     "pages/commodity/commodity",
     "pages/user/index",
     "pages/user/store/store",
-    "pages/user/store/management/management",
-    "pages/user/store/commodityManage/commodityManage"
+    "pages/sellorderMan/sellorderMan",
+    "pages/visitant/visitant",
+    "pages/user/store/management/management"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "鹅毛小店",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/indexTo/indexTo",
         "iconPath": "pages/images/y-icon8-1.png",
         "selectedIconPath": "pages/images/home_2.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "pages/images/y-icon9-1.png",
+        "selectedIconPath": "pages/images/y-icon9-2h.png",
+        "text": "订单"
       },
       {
         "pagePath": "pages/logs/logs",

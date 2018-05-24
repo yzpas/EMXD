@@ -1,26 +1,26 @@
-<view class="m_xpres">
-  <view class="shop">
-    <image src="/pages/images/edit.png" class="edit" mode="widthFix"></image>
-    <image src="/pages/images/del_1.png" class="dels" mode="widthFix"></image>
-    <text>分类1</text>
-  </view>
-  <view class="shop">
-    <image src="/pages/images/edit.png" class="edit" mode="widthFix"></image>
-    <image src="/pages/images/del_1.png" class="dels" mode="widthFix"></image>
-    <text>分类2</text>
-  </view>
-</view>
-<button class="m_xcome" bindtap="address">添加商品分类</button>
-
-<view class="m_xpopup on">
-  <view class="m_xconfirm">           
-    <view class="title">添加分类</view>   
-    <view class="import">
-        <input type="text" placeholder="添加分类" />
+<view class='public_grey_bg'>
+   <view class="m_xpres">
+    <view class="shop" wx:for="{{shopCategories}}" wx:key = "{{item.id}}" data-info="{{item}}" bindtap='ClickShop'>
+      <image src="/pages/images/edit.png" class="edit" mode="widthFix" data-title="{{item.title}}" data-id="{{item.id}}" data-mark="2" catchtap='updateClassify'/>
+      <image src="/pages/images/del_1.png" class="dels" mode="widthFix" data-id="{{item.id}}" catchtap='clickDeleteClassify' />
+      <text>{{item.title}}</text>
     </view>
+  </view>
+  <view class="m_xpopup" hidden='{{!addPopups}}'></view> 
+  <view class="m_xconfirm" hidden='{{!addPopups}}'>           
+    <view class="title">添加分类</view>   
+    <input class="importTo" placeholder="添加分类" bindinput="bindKeyInput"  value="{{addTitle}}" ></input>  
+      <!-- <view class="importTo">
+      bindinput="bindKeyInput" 
+      focus="{{focus}}" 
+        bindinput="bindKeyInput" placeholder="添加分类" value='{{addTitle}}' focus="{{focus}}" 
+      </view> -->
     <view class="btns">               
-        <view class="cancel">取消</view>       
-        <view class="ensure">确定</view>       
-    </view>        
+      <view class="cancel" bindtap='cancel'>取消</view>       
+      <view class="ensure" bindtap='confirm'>确定</view>       
+    </view>          
+  </view>  
+  <view class='addbox'>
+    <view class="m_xcome" bindtap="address" data-mark='1'>添加商品分类</view> 
   </view>
 </view>

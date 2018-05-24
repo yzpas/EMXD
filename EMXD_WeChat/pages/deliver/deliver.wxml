@@ -1,18 +1,26 @@
 <view class="m_xshipment">
     <view class="rows">
-        <input type="text" placeholder="选择快递公司" />
+        <picker bindchange="provincechange" value="{{id}}" range="{{shipping}}" range-key='title' bindtap='Clickprovince'>
+          <!-- <view class="picker" wx:if="">省</view>  -->
+           <block wx:if="{{!title}}">
+            <view class="picker" >{{province}}</view>
+          </block> 
+          <block wx:else>
+              <view class="picker" >{{shipping[id].title}}</view> 
+          </block>
+        </picker>
     </view>
     <view class="rows">
-        <input type="text" placeholder="输入快递编号" />
+        <input type="text" placeholder="输入快递编号" bindinput='bindKeyInput' />
     </view>
 
      <view class="take">
         
-        <view class="right">
+        <view class="right" bindtap='deliver'>
           <view class="btns">快递发货</view>
           <view class="ums">填写快递编号</view>
         </view>
-        <view class="left">
+        <view class="left" bindtap='beenSent'>
           <view class="btns gray">已自行寄出</view>
           <view class="ums">无需填写快递单号</view>
         </view>

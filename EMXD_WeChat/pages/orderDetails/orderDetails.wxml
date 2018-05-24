@@ -1,57 +1,66 @@
 <view class="m_xsend">
-    <view class="title">
-        <text>已完成</text>超市名称<image src="/pages/images/tel.png" class="demo" mode="widthFix"></image> 
+    <view class="title" bindtap='shop_tel'>
+        <text>{{buyerView.status}}</text>{{buyerView.shop_title}}<image src="/pages/images/tel.png" class="demo" mode="widthFix"></image> 
     </view>
-    <view class="cont">
-      <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+    <view class="cont" wx:for="{{buyerView.products}}" wx:key = "{{item.title}}">
+      <image src="{{item.image}}" class="demo" mode="widthFix"></image> 
       <view class="pay">
-        <view class="nuns">[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
-        <view class="nuns red"><text>共1件</text>￥39.99</view>
+        <view class="nuns">{{item.title}}</view>
+        <view class="nuns red lf">{{item.count}}</view>
+        <view class="nuns red rf">{{item.price}}</view>
       </view>
     </view> 
-    <view class="remark">03-12  18:00</view>
-    <view class="remark total top"><text>商品金额</text>￥79.98</view>
-    <view class="remark total bottom"><text>应付 ￥79.98</text>合计：79.98</view>
+    <view class="remark">{{buyerView.order_created_at}}</view>
+    <view class="remark total top"><text>商品金额</text>{{buyerView.product_amount}}</view>
+    <view class="remark total bottom"><text>共{{buyerView.product_count}}件 </text>合计：{{buyerView.order_amount}}</view>
 </view>
 <view class="m_xnews">
     <view class="title">配送信息</view>
     <view class="mains">
         <text>收货地址：</text>
         <view class="ruins">
-          <view class="nub">石头  186***1111</view>
-          <view class="nub">北京市朝阳区望京1单元101</view>
+          <view class="nub">{{buyerView.buyer_address_info.username}}  {{buyerView.buyer_address_info.telephone}}</view>
+          <view class="nub">{{buyerView.buyer_address_info.address}}</view>
         </view>
     </view>
-    <view class="mains">
+    <!--view class="mains">
         <text>配送方式：</text>
-        <view class="ruins">商家配送</view>
-    </view>
+        <view class="ruins">{{buyerView.shipping_info.shipping_type}}</view>
+    </view-->
     <view class="mains">
         <text>物流信息：</text>
-        <view class="ruins">申通  1111 1111 1111 1111</view>
+        <view class="ruins">{{buyerView.shipping_info.shipping_number}}</view>
     </view>
     <view class="mains">
         <text>发货时间：</text>
-        <view class="ruins">2017-03-02 18:00:03</view>
+        <view class="ruins">{{buyerView.shipping_info.shipping_time}}</view>
+    </view>
+    <view class="mains">
+        <text>收货时间：</text>
+        <view class="ruins">{{buyerView.confirm_receipt_time}}</view>
     </view>
 </view>
 <view class="m_xnews m_xpadd">
     <view class="title">订单信息</view>
     <view class="mains">
         <text>订单编号：</text>
-        <view class="ruins">1111 1111 1111 1111</view>
+        <view class="ruins">{{buyerView.sn}}</view>
     </view>
     <view class="mains">
         <text>下单时间：</text>
-        <view class="ruins">2018-01-19  16:09:10</view>
+        <view class="ruins">{{buyerView.order_created_at}}</view>
     </view>
     <view class="mains">
         <text>支付方式：</text>
-        <view class="ruins">在线支付</view>
+        <view class="ruins">{{buyerView.pay_type}}</view>
     </view>
     <view class="mains">
         <text>订单备注：</text>
-        <view class="ruins">下午6点半送到，电话111111</view>
+        <view class="ruins">{{buyerView.note}}</view>
     </view>
 </view>
-<view class="m_xcancel">取消订单</view>
+<view wx:if="{{buyerView.actions.length > 0}}">
+  <view wx:if="{{item.title == '去支付'}}" class="m_xcancel_rf {{item.title == '去支付'?'paystyle':''}}" bindtap='pay' wx:for="{{buyerView.actions}}" wx:key ="{{item.id}}" data-info = "{{item}}">{{item.title}}</view>
+  <view wx:if="{{item.title == '取消订单'}}" class="m_xcancel_rf {{item.title == '取消订单' && buyerView.actions.length == 1?'paystyleTo':''}}" bindtap='pay' wx:for="{{buyerView.actions}}" wx:key ="{{item.id}}" data-info = "{{item}}">{{item.title}}</view>
+   <view wx:if="{{item.title == '确认收货'}}" class="m_xcancel_rfTo paystyle" bindtap='pay' wx:for="{{buyerView.actions}}" wx:key ="{{item.id}}" data-info = "{{item}}">{{item.title}}</view>
+</view>

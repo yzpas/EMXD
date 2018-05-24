@@ -1,0 +1,16 @@
+<view class="m_xsend">
+  <scroll-view>
+    <view class="cont" wx:for="{{shopVisitor}}" wx:key = "{{item.user_name}}">
+      <image src="{{item.user_photo}}" class="demo" mode='aspectFit'></image> 
+      <view class="pay">
+        <view class="nuns">{{item.user_name}}</view>
+        <view class="nuns look">{{item.date_time}}</view>
+      </view>
+    </view> 
+    
+  </scroll-view>
+    <view class='noShopContents' wx:if="{{shopVisitor.length == 0}}">
+      <image  src='/pages/images/noshop.png' mode="widthFix" class='noshop' ></image>
+      <view class='noText'>暂时没有访客</view>
+    </view>
+</view>

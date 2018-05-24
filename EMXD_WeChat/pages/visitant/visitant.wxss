@@ -1,0 +1,20 @@
+page{background:#fff;}
+
+/* m_xsend */
+.m_xsend{background:#fff;}
+.m_xsend .cont{overflow:hidden;padding:26rpx;border-bottom:1px solid #efeeef;}
+.m_xsend .cont image{float:left;width:62rpx;height:62rpx;}
+.m_xsend .cont .pay{margin-left:86rpx;}
+.m_xsend .cont .nuns{font-size:28rpx;color:#586c94;line-height:30rpx;}
+.m_xsend .cont .look{color:#9a9a9a;font-size:24rpx;padding-top:6rpx;}
+.noshop{
+  width: 250rpx;
+  overflow: hidden;
+  display: block;
+  margin:70rpx auto 30rpx;
+}
+.noText{
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+}

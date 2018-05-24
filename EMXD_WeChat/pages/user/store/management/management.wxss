@@ -15,7 +15,6 @@
 .list_lf{
   font-size: 28rpx;
   color: #6d6d6d;
-  font-weight: bold;
 }
 .list_rf{
   font-size: 28rpx;
@@ -25,10 +24,10 @@
   
   text-align: right;
 }
-.management_icon{
+/* .management_icon{
   width: 14rpx;
   height: 24rpx;
-}
+} */
 .management_icon1{
   width: 72rpx;
   height: 72rpx;
@@ -43,14 +42,18 @@
   height: 200rpx;
 }
 .section_text{
-  font-size: 24rpx;
   color: #6d6d6d;
-  font-weight: bold;
 }
 .section textarea{
   width: 100%;
-  line-height: 30rpx;
+  line-height: 40rpx;
   font-size:28rpx;
+  height: 180rpx;
+  overflow-y: auto;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  text-align: justify;
+
 }
 .management_btn{
   width: 678rpx;

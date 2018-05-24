@@ -1,52 +1,109 @@
-<!-- <view class="m_xconstr">
-  <view class="rows">
-      <input type="text" placeholder="收货人" />
-  </view>
-  <view class="rows">
-      <input type="number" placeholder="联系方式" />
-  </view>
-  <view class="rows">
-      <input type="text" placeholder="详细地址" />
-  </view>
-</view> -->
-<view class="m_xsettled">
-    <view class="title">北京市</view>
-    <view class="line">
-        <text>联系人：</text>
-        <view class="import">
-            <input type="text" class="text" placeholder="啦啦" />
+<view >
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="m_xsettled">
+      <view class="line" bindtap='ClickProvince'>
+        <picker bindchange="provincechange" value="{{id}}" range="{{province_arr}}" range-key='name' >
+          <text>所在省：</text>
+          <block wx:if="{{provinceArr}}">
+            <view class="picker" >{{province}}</view>
+          </block> 
+          <block wx:else>
+              <view class="picker" >{{province_arr[id].name}}</view> 
+          </block> 
+          <!-- <view class="import">
+              <input value='{{province_arr[id].name}}' placeholder='请选择省' disabled='true'></input>
+          </view> -->
+           <!-- <block wx:if="{{provinceArr}}">
+            <view class="picker">所在省：{{province}}</view>
+          </block>  -->
+          <!-- <block wx:else> -->
+              <!-- <input value='{{province_arr[id].name}}' placeholder='请选择省' disabled='true'></input> -->
+              <!-- <view class="picker">所在省：{{province_arr[id].name}}</view>  -->
+          <!-- </block> -->
+        
+        </picker>
+      </view>
+      <view class="line">
+        <picker bindchange="citychange" value="{{cityid}}" range="{{city_arr}}" range-key="{{'name'}}">
+          <!-- <block wx:if="{{cityArr}}">
+            <view class="picker">所在市：{{city}}</view>
+          </block> 
+          <block wx:else>
+            <view class="picker">所在市：{{city_arr[cityid].name}}</view>
+          </block> -->
+          <text>所在市：</text>
+          <!-- <view class="import">
+              <input value='{{city_arr[id].name}}' placeholder='请选择市' disabled='true'></input>
+          </view> -->
+          <block wx:if="{{cityArr}}">
+            <view class="picker" >{{city}}</view>
+          </block> 
+          <block wx:else>
+            <view class="picker">{{city_arr[cityid].name}}</view>
+          </block>
+        </picker>
+      </view>
+      <view class="line">
+        <picker bindchange="districtchange" value="{{districtid}}" range="{{district_arr}}" range-key="{{'name'}}">
+          <!-- <block wx:if="{{districtArr}}">
+            <view class="picker">所在区：{{district}}</view>
+          </block> 
+          <block wx:else>
+            <view class="picker">所在区：{{district_arr[districtid].name}}</view>
+          </block> -->
+          <!-- <text>所在区：</text>
+          <view class="import">
+              <input value='{{district_arr[id].name}}' placeholder='请选择区' disabled='true'></input>
+          </view> -->
+          <text>所在区：</text>
+          <block wx:if="{{districtArr}}">
+            <view class="picker" >{{district}}</view>
+          </block> 
+          <block wx:else>
+            <view class="picker">{{district_arr[districtid].name}}</view>
+          </block> 
+        </picker>
+      </view>
+        <view class="line">
+            <text>联系人：</text>
+            <view class="import">
+                <input type="text" class="text" name="shopkeeper" placeholder="请输入联系人" />
+            </view>
+        </view>
+        <view class="line" >
+            <text>手机号：</text>
+            <view class="import">
+                <input type="number" maxlength='11' bindinput='bindKeyInput' class="text" name="mobile" placeholder="请输入手机号" />
+            </view>
+        </view>
+        <view class="line">
+            <view bindtap='gitcode' class="gitcode {{is_show?'show':'hide'}}">获取验证码</view>
+            <view class="gitcodeTo {{is_show?'hide':'show'}}">重新发送{{last_time}}秒</view>
+            <text>验证码：</text>
+            <view class="import nall">
+                <input type="number" maxlength='6' class="text" name="sms_code" placeholder="请输入短信验证码" />
+            </view>
+        </view>
+        <view class="line">
+            <text>店铺名称：</text>
+            <view class="import">
+                <input type="text" class="text" name="shop_title" placeholder="请输入店铺名称" />
+            </view>
+        </view>
+        <view class="line">
+            <text>详细地址：</text>
+            <view class="import">
+                <input type="text" class="text" name="address" placeholder="请输入详细地址" />
+            </view>
+        </view>
+        <view class="introduction">
+            <text>店铺简介：</text>
+            <view class="import">
+                <textarea placeholder="请输入店铺简介"  name="shop_intro" />
+            </view>
         </view>
     </view>
-    <view class="line">
-        <text>手机号：</text>
-        <view class="import">
-            <input type="text" class="text" placeholder="收货人手机号码" />
-        </view>
-    </view>
-    <view class="line">
-        <button>获取验证码</button>
-        <text>验证码：</text>
-        <view class="import nall">
-            <input type="text" class="text" placeholder="" />
-        </view>
-    </view>
-    <view class="line">
-        <text>店铺名称：</text>
-        <view class="import">
-            <input type="text" class="text" placeholder="" />
-        </view>
-    </view>
-    <view class="line">
-        <text>详细地址：</text>
-        <view class="import">
-            <input type="text" class="text" placeholder="" />
-        </view>
-    </view>
-    <view class="line">
-        <text>店铺简介：</text>
-        <view class="import">
-            <textarea value="" />
-        </view>
-    </view>
+    <button class="m_xcome" formType="submit">提交</button> 
+  </form>
 </view>
- <button class="m_xcome">提交</button> 
+ 

@@ -26,6 +26,7 @@ page{background:#f4f3f4;}
   font-size:28rpx;
   color:#6d6d6d;
   line-height:88rpx;
+  height: 88rpx;
   border-bottom:1px solid #f4f3f4;
   overflow:hidden;
 }
@@ -37,11 +38,16 @@ page{background:#f4f3f4;}
   width:80%;
 }
 .m_xsettled .nall{
-  width:60%;
+  width:50%;
 }
 .m_xsettled .import .text{
   display:block;
   width: 100%;
+  height:88rpx;
+  line-height:88rpx;
+}
+.m_xsettled .import input{
+  display:block;
   height:88rpx;
   line-height:88rpx;
 }
@@ -52,16 +58,71 @@ page{background:#f4f3f4;}
   height:150rpx;
   marin-bottom:14rpx;
 }
-.m_xsettled .line button{
+.m_xsettled .line .gitcode{
   float:right;
   height:54rpx;
   line-height:54rpx;
-  width:140rpx;
+  /* width:140rpx; */
+  padding: 0 20rpx;
   font-size:24rpx;
   color:#fff;
   background:#fc6466;
   border:none;
   border-radius:0;
-  padding:0;
   margin:17rpx 0 0;
+}
+ .m_xsettled .line .gitcodeTo{
+  float:right;
+  height:54rpx;
+  line-height:54rpx;
+  padding: 0 20rpx;
+  font-size:24rpx;
+  color:#333;
+  background:#f4f3f4;
+  border:none;
+  border-radius:0;
+  margin:17rpx 0 0;
+} 
+.picker{
+  width: 50%;
+  height: 88rpx;
+  overflow: hidden;
+}
+.introduction{
+  width: 100%;
+  height: 200rpx;
+  overflow: hidden;
+  padding:0 24rpx;
+  font-size:28rpx;
+  color:#6d6d6d;
+  line-height:88rpx;
+  border-bottom:1px solid #f4f3f4;
+}
+.introduction text{
+  float:left;
+}
+.introduction textarea{
+  padding-right: 20rpx;
+  box-sizing: border-box;
+  overflow-y: auto;
+  height: 240rpx;
+}
+.hide{
+ display: none;
+}
+.show{
+ display: block;
+}
+.getCode{
+  width: 172rpx;
+  height: 60rpx;
+  display: block;
+  float: right;
+  line-height: 60rpx;
+  text-align: center;
+  background: rgba(255,255,255,0.15);
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  color: #FFFFFF;
+  margin-top: 20rpx;
 }

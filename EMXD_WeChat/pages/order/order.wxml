@@ -1,51 +1,63 @@
-<view class="m_xsend">
-    <view class="title">
-        <text>进行中</text>超市名称
-    </view>
-    <view class="design">
-        <view class="pays">
-            <text>￥79.98</text>
-            <view class="letter">共4件</view>
+<view>
+  <view class="m_xsend">
+    <scroll-view>
+    <!--wx:for="{{logs}}" wx:key = "{{item.id}}"  -->
+        <view class='list' wx:for="{{logs}}" wx:key = "{{item.id}}" >
+            <view class="title"  hidden="{{item.status == '待付款'}}">
+                <text>{{item.status}}</text>{{item.shop_title}}
+            </view>
+            <view class="design" data-order_sn = "{{item.order_sn}}" bindtap="details" hidden="{{item.status == '待付款'}}">
+                <view class="pays">
+                    <text>{{item.amount}}</text>
+                    <view class="letter">{{item.product_count}}</view>
+                </view>
+                <image src="/pages/images/more.png" class="more" mode="widthFix" wx:if="{{item.product_images.length > 4}}"></image> 
+                <view class="all" >
+                <image src="{{item.product_images[0]}}" class="demo" mode="widthFix"></image> 
+                <image src="{{item.product_images[1]}}" class="demo" mode="widthFix"></image> 
+                <image src="{{item.product_images[2]}}" class="demo" mode="widthFix"></image> 
+                <image src="{{item.product_images[3]}}" class="demo" mode="widthFix"></image> 
+                </view>
+            </view> 
+            <view class="take"  hidden="{{item.status == '待付款'}}">
+                <view class="btns" bindtap='affirm' data-info = "{{item.actions[0]}}" wx:if="{{item.actions[0].title == '确认收货' || item.actions[1].title == '确认收货'}}">确认收货</view>
+                <view class="btns gray" wx:if="{{item.actions}}" wx:if="{{item.actions[0].title == '取消订单' || item.actions[1].title == '取消订单'}}" data-info = "{{item.actions[0]}}" bindtap='Cancel'>取消订单</view>
+                <text>{{item.created_at}}</text>
+            </view>
+            <view class="m_xsend" wx:if ="{{item.status == '待付款'}}">
+            <view class="title">
+                <text class="red">{{item.status}}</text>{{item.shop_title}}
+            </view>
+                <view class="design wait" data-order_sn = "{{item.order_sn}}" bindtap="details">
+                    <image src="/pages/images/pays.png" class="money" mode="widthFix"></image> 
+                    <view class="conve">
+                        <text>{{item.pay_tips[0]}}</text>
+                        <text>{{item.pay_tips[1]}}</text>
+                        <image src="/pages/images/trian_1.png" class="tr" mode="widthFix"></image>
+                    </view>
+                    <view class="unit">
+                    <view class="pays">
+                        <text>{{item.product_amount}}</text>
+                        <view class="letter">{{item.product_count}}</view>
+                    </view> 
+                    <view class="all">
+                        <image src="{{item.product_images[0]}}" class="demo" mode="widthFix"></image> 
+                        <image src="{{item.product_images[1]}}" class="demo" mode="widthFix"></image> 
+                        <image src="{{item.product_images[2]}}" class="demo" mode="widthFix"></image> 
+                        <image src="{{item.product_images[3]}}" class="demo" mode="widthFix"></image> 
+                    </view>   
+                    </view> 
+                </view> 
+                <view wx:if="{{item.note != ''}}" class="remark">{{item.note}}</view>
+                <view class="take">
+                    <view class="btns" bindtap='goPay' data-info = "{{item.order_sn}}">{{item.actions[0].title}}</view>
+                    <text>{{item.pay_tips[0]}}</text>
+                </view>
+                
+            </view> 
         </view>
-        <image src="/pages/images/more.png" class="more" mode="widthFix"></image> 
-        <view class="all" bindtap="details">
-          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
-          <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image>
-        </view>
-    </view> 
-    <view class="take">
-        <view class="btns">确认收货</view>
-        <view class="btns gray">取消收货</view>
-        <text>03-12  18:00</text>
-    </view>
-</view>
-<view class="m_xsend">
-    <view class="title">
-        <text class="red">待支付</text>超市名称
-    </view>
-    <view class="design wait">
-        <image src="/pages/images/pays.png" class="money" mode="widthFix"></image> 
-        <view class="conve">
-            <text>待支付 今天 17：58</text>
-            <text>请在订单提交后尽快完成支付，超市订单自动取消</text>
-            <image src="/pages/images/trian_1.png" class="tr" mode="widthFix"></image>
-        </view>
-        <view class="unit">
-          <view class="pays">
-              <text>￥79.98</text>
-              <view class="letter">共2件</view>
-          </view> 
-          <view class="all" bindtap="details">
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image>
-            <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image>
-          </view>   
-        </view> 
-    </view> 
-    <view class="remark">订单备注：下午6点半送到，电话111111</view>
-    <view class="take">
-        <view class="btns">去支付</view>
-        <text>今天  18:00</text>
-    </view>
+        
+      </scroll-view>
+      <image src='/pages/images/noshop.png' mode="widthFix" class='noshop' wx:if="{{logs.length === 0}}"></image>
+  </view>
 </view>

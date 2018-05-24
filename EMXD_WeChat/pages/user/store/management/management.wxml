@@ -3,23 +3,19 @@
     <view class='management_box'>
       <view class='management_list'>
         <view class='list_lf lf'>店铺名称</view>
-        <input class='list_rf rf' type='text' placeholder='请输入店铺名字'/>
+        <input class='list_rf rf' type='text' value='{{shop_title}}' bindinput="bindReplaceInput" placeholder='请输入店铺名字'/>
       </view>
       <view class='management_list'>
         <view class='list_lf lf'>店铺头像</view>
-        <view class='list_rf rf'></view>
+        <view class='list_rf rf' bindtap='preview'><image src='{{shop_photo}}' mode='aspectFit' class='management_icon1'></image></view>
       </view>
       <view class='management_list'>
         <view class='list_lf lf'>认证信息</view>
-        <view class='list_rf rf'><image src='/pages/images/y-icon11.png' mode='aspectFit' class='management_icon'></image></view>
-      </view>
-      <view class='management_list'>
-        <view class='list_lf lf'>店铺二维码分享</view>
-        <view class='list_rf rf'><image src='/pages/images/y-icon11.png' mode='aspectFit' class='management_icon1'></image></view>
+        <view class='list_rf rf'>{{shop_info.renzheng}}</view>
       </view>
       <view class="section">
-        <textarea bindblur="bindTextAreaBlur" placeholder-class="section_text" placeholder="店铺简介" />
+        <textarea bindblur="bindTextAreaBlur" value='{{shop_introduce}}' placeholder-style='font-size:14px' placeholder-class="section_text" placeholder="店铺简介" bindinput="bindReplaceInputTo" />
       </view>
     </view>
-    <view class='management_btn'>确  定</view>
+    <view class='management_btn' bindtap='updateSave'>确  定</view>
 </view>

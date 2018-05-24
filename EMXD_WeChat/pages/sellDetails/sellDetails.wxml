@@ -1,58 +1,65 @@
 <view class="m_xsend">
-    <view class="title">
-        <text>已完成</text>超市名称 
+    <!-- <view class="title">
+        <text>已完成</text>{{sellerView}} 
+    </view> -->
+    <view class="title" bindtap='shop_tel'>
+        <text>{{sellerView.status}}</text>{{sellerView.buyer_address_info.username}}  
     </view>
-    <view class="cont">
-      <image src="/pages/images/pics_6.jpg" class="demo" mode="widthFix"></image> 
+    <view class="cont" wx:for="{{sellerView.products}}" wx:key = "{{item.title}}">
+      <image src="{{item.image}}" class="demo" mode="widthFix"></image> 
       <view class="pay">
-        <view class="nuns">[农鲜生] 罗非鱼约1公斤-宰杀需要备注</view>
-        <view class="nuns red"><text>共1件</text>￥39.99</view>
+        <view class="nuns">{{item.title}}</view>
+        <view class="nuns red"><text>{{item.price}}</text>{{item.count}}</view>
       </view>
     </view> 
-    <view class="remark">03-12  18:00</view>
-    <view class="remark total top"><text>商品金额</text>￥79.98</view>
-    <view class="remark total bottom"><text>应付 ￥79.98</text>合计：79.98</view>
+    <view class="remark">{{sellerView.order_created_at}}</view>
+    <view class="remark total top"><text>商品金额</text>{{sellerView.product_amount}}</view>
+    <view class="remark total bottom"><text>共{{sellerView.product_count}}件</text>合计：{{sellerView.product_amount}}</view>
 </view>
 <view class="m_xnews">
     <view class="title">配送信息</view>
     <view class="mains tels">
-        <image src="/pages/images/tel.png" class="demo" mode="widthFix"></image>
+        <image src="/pages/images/tel.png" class="demo" mode="widthFix" data-telephone="{{sellerView.buyer_address_info.telephone}}" bindtap='bindtelephone'></image>
         <text>收货地址：</text>
         <view class="ruins">
-          <view class="nub">石头  186***1111</view>
-          <view class="nub">北京市朝阳区望京1单元101</view>
+          <view class="nub">{{sellerView.buyer_address_info.username}}  {{sellerView.buyer_address_info.telephone}} </view>
+          <view class="nub">{{sellerView.buyer_address_info.address}}</view>
         </view>
     </view>
-    <view class="mains">
+    <!--view class="mains">
         <text>配送方式：</text>
-        <view class="ruins">商家配送</view>
-    </view>
+        <view class="ruins">{{sellerView.shipping_info.shipping_type}}</view>
+    </view-->
     <view class="mains">
         <text>物流信息：</text>
-        <view class="ruins">申通  1111 1111 1111 1111</view>
+        <view class="ruins">{{sellerView.shipping_info.shipping_number}}</view>
     </view>
     <view class="mains">
         <text>发货时间：</text>
-        <view class="ruins">2017-03-02 18:00:03</view>
+        <view class="ruins">{{sellerView.shipping_info.shipping_time}}</view>
+    </view>
+    <view class="mains">
+        <text>收货时间：</text>
+        <view class="ruins">{{sellerView.confirm_receipt_time}}</view>
     </view>
 </view>
 <view class="m_xnews m_xpadd">
     <view class="title">订单信息</view>
     <view class="mains">
         <text>订单编号：</text>
-        <view class="ruins">1111 1111 1111 1111</view>
+        <view class="ruins">{{sellerView.sn}}</view>
     </view>
     <view class="mains">
         <text>下单时间：</text>
-        <view class="ruins">2018-01-19  16:09:10</view>
+        <view class="ruins">{{sellerView.order_created_at}}</view>
     </view>
     <view class="mains">
         <text>支付方式：</text>
-        <view class="ruins">在线支付</view>
+        <view class="ruins">{{sellerView.pay_type}}</view>
     </view>
     <view class="mains">
         <text>订单备注：</text>
-        <view class="ruins">下午6点半送到，电话111111</view>
+        <view class="ruins">{{sellerView.note}}</view>
     </view>
 </view>
-<view class="m_xcancel">订单进行中</view>
+<view class="m_xcancel" wx:for="{{sellerView.actions}}" wx:key="{{item.id}}" data-item="{{item}}" bindtap='Goitem'>{{item.title}}</view>
